@@ -12,7 +12,7 @@ categories: jekyll web site
 ### Markdown support
 It gives you the ability to create posts ang pages using Markdown(not only) and YAML, which lets you create clean posts easily:
 
-{% highlight markdown %}
+{% highlight txt %}
 ---
 layout:     post
 title:      "Post title"
