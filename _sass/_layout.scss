@@ -1,10 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Merienda+One|Merienda);
+
 /**
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    margin-top: 1em;
     min-height: 56px;
+    background: linear-gradient(to right, #F2FAFF, #A6DCFF 20%, #F2FAFF);
+    color: #00558C;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -17,16 +20,18 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+    font-family: 'Merienda One', cursive;
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: inherit;
     }
 }
 
 .site-nav {
     float: right;
     line-height: 56px;
+    font-family: 'Merienda', cursive;
 
     .menu-icon {
         display: none;
