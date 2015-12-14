@@ -192,6 +192,10 @@
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
+
+    p {
+        margin: 0;
+    }
 }
 
 .post-link {

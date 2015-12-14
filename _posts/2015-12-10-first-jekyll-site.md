@@ -2,7 +2,7 @@
 layout: post
 title:  "First Jekyll site"
 date:   2015-12-10 18:00:00 +0100
-categories: jekyll web site
+categories: [jekyll,web,site]
 ---
 **Jekyll is the best tool for site creation I've ever found**. It took me **just few minutes(or seconds) to get site up and running**. Well, I don't count time spent making this post, customizing styles and layout. However, this post isn't going to be long. It will just point to Jekyll's highlights which are currently the most valuable to me.
 

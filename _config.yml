@@ -15,5 +15,10 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: 
 github_username:  kravemir
 
+
+# Posts Settings
+permalink: /posts/:year/:title
+author_name: Miroslav Kravec
+
 # Build settings
 markdown: kramdown
