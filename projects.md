@@ -3,6 +3,10 @@ layout: page
 title: Projects
 menu: main
 permalink: /projects/
+sitemap:
+  lastmod:      2015-12-15 00:00:00 +0000
+  changefreq:   'monthly'
+  priority:     0.7
 ---
 
 #HCLang
