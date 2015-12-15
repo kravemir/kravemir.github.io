@@ -6,7 +6,13 @@ layout: default
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     <div class="post-meta">
-      <p><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ site.author_name }}</span></span></p>
+      <p>
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> 
+        {% if page.date_mod %}(modified <time datetime="{{ page.date_mod | date_to_xmlschema }}" itemprop="dateModified">{{ page.date_mod | date: "%b %-d, %Y" }}</time>)
+        {% else %}
+        <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema}}" />
+        {% endif %}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ site.author_name }}</span></span></p>
       {% if page.categories != empty %}
       <p class="post-categories">
           <meta itemprop="keywords" content="{{ page.categories | join: ', '}}">
