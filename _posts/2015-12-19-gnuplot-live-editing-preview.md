@@ -64,7 +64,7 @@ all: benchmark-graph.png
 {% endhighlight %}
 
 We are now able build it with just one command:
-{% highlight shell %}
+{% highlight sh %}
 make
 {% endhighlight %}
 
@@ -84,7 +84,7 @@ realtime:
 
 We are now able to launch realtime rebuild target:
 
-{% highlight shell %}
+{% highlight sh %}
 make realtime
 {% endhighlight %}
 
