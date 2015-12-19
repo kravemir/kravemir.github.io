@@ -22,3 +22,4 @@ author_name: Miroslav Kravec
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
