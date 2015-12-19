@@ -33,7 +33,7 @@ layout: default
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = '{{ page.url | prepend: site.url | replace: "//", "/" }}'; // TODO: check if it's always cannonical
+      this.page.url = '{{ page.url | prepend: site.url | replace: "//", "/" | replace: "http:/", "http://" }}'; // TODO: check if it's always cannonical
       this.page.identifier = '{{ page.path }}';
     };
     (function() {
