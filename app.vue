@@ -80,7 +80,7 @@ h4 a {
 nav.main-nav {
   display: flex;
   flex-direction: row;
-  align-items: end;
+  align-items: flex-end;
 
   padding: 0.75rem 0;
   margin: 1rem 0;
