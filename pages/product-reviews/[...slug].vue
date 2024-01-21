@@ -1,9 +1,9 @@
 <template>
-  <main>
+  <main class="product-review">
     <ContentDoc v-slot="{ doc }">
       <article>
         <h1>
-          {{ doc.title }}
+          {{ doc.title + " review" }}
           <span class="subtitle" v-if="doc.subtitle">{{ doc.subtitle }}</span>
         </h1>
 
@@ -40,11 +40,40 @@
     </ContentDoc>
   </main>
 </template>
-<style scoped>
+<script setup lang="ts">
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import { onMounted, onUnmounted } from 'vue'
 
+let lightbox: PhotoSwipeLightbox|null = null
+
+onMounted(() => {
+  if (process.browser && !lightbox) {
+    lightbox = new PhotoSwipeLightbox({
+      gallery: 'main.product-review',
+      children: 'div.page-image a',
+      pswpModule: () => import('photoswipe'),
+    });
+    lightbox.init();
+  }
+})
+
+onUnmounted(() => {
+  if (process.browser && lightbox) {
+    lightbox.destroy();
+    lightbox = null;
+  }
+})
+</script>
+<style scoped>
 .proscons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .proscons {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .proscons ul {

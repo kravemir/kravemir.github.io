@@ -2,7 +2,10 @@ name: Deploy Nuxt Content with GitHub Pages
 
 on:
   push:
-    branches: ["gh-pages-setup"]
+    branches:
+      - main
+      - gh-pages-setup
+      - pre-main
   workflow_dispatch:
 
 permissions:

@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: {enabled: true},
   modules: [
+    'nuxt-content-assets', // must be before content!
     '@nuxt/content',
     '@nuxt/image',
   ],
@@ -9,5 +10,11 @@ export default defineNuxtConfig({
     prerender: {
       routes: ['/sitemap.xml']
     }
+  },
+  image: {
+    dir: '.nuxt/content-assets/public'
+  },
+  contentAssets: {
+    imageSize: 'style attrs'
   }
 })

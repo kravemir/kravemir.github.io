@@ -17,7 +17,7 @@ notes:
     - skewed percentage report for rechargeable NiMH batteries
 ---
 
-![Nous E6 powered on](/images/product-reviews/nous-e6/front-powered.jpg)
+![Nous E6 powered on](images/front-powered.jpg)
 
 ## Precision
 
@@ -36,7 +36,7 @@ Notes:
 
 Device is powered by two AAA batteries.
 
-![Nous E6 with opened back battery compartment](/images/product-reviews/nous-e6/back-opened.jpg)
+![Nous E6 with opened back battery compartment](images/back-opened.jpg)
 
 Rechargeable 1.2V NiMH batteries work fine. I love this fact, because I am not producing waste by early replacement of batteries, when I want to be sure, that sensor used in automations won't go dead in a bad moment.
 
@@ -54,11 +54,11 @@ To be added:
 
 Box front and back:
 
-![Nous E6 box front and back](/images/product-reviews/nous-e6/package-front-back.jpg)
+![Nous E6 box front and back](images/package-front-back.jpg)
 
 Box contents:
 
-![Nous E6 box contents](/images/product-reviews/nous-e6/package-contents.jpg)
+![Nous E6 box contents](images/package-contents.jpg)
 
 
 ## Price
