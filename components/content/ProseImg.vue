@@ -8,7 +8,7 @@
       class="page-image"
     >
       <NuxtPicture
-        format="avif,webp,jpeg"
+        format="webp,jpeg"
         :src="src"
         :alt="alt"
         :width="width"

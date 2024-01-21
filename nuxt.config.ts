@@ -11,6 +11,14 @@ export default defineNuxtConfig({
       routes: ['/sitemap.xml']
     }
   },
+  hooks: {
+    // https://github.com/davestewart/nuxt-content-assets/issues/49
+    // Needed to prevent generate step from hanging. NUXT ^3.7 and above issue
+    close: (nuxt) => {
+      if (!nuxt.options._prepare)
+        process.exit()
+    }
+  },
   image: {
     dir: '.nuxt/content-assets/public'
   },
