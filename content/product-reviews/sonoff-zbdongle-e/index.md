@@ -56,25 +56,21 @@ However, Sonoff made it look quite nice even if it's big and bulky.
 
 Disassembled device looks like this:
 
-<div class="gallery">
-
+::image-gallery
 ![Sonoff ZBDongle-E Disassembled](images/stick-disassembled.jpg){caption="Disassembled"}
 ![Sonoff ZBDongle-E Board top side](images/stick-disassembled-board-top.jpg){caption="Board top side"}
 ![Sonoff ZBDongle-E Board bottom side](images/stick-disassembled-board-bottom.jpg){caption="Board bottom side"}
-
-</div>
+::
 
 ## Box and packaging
 
 Solid nice paper box with a manual, stick and antenna inside:
 
-<div class="gallery">
-
+::image-gallery
 ![Sonoff ZBDongle-E Box Front](images/box-front.jpg){caption="Box Front"}
 ![Sonoff ZBDongle-E Box Back](images/box-back.jpg){caption="Box Back"}
 ![Sonoff ZBDongle-E Box Contents](images/box-contents.jpg){caption="Box Contents"}
-
-</div>
+::
 
 ## Summary
 
