@@ -23,6 +23,6 @@ export default defineNuxtConfig({
     dir: '.nuxt/content-assets/public'
   },
   contentAssets: {
-    imageSize: 'style attrs'
+    imageSize: 'style attrs src',
   }
 })

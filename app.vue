@@ -221,7 +221,7 @@ li li li {
   margin: 0.25rem;
 }
 
-main article div.page-image {
+main article figure.page-image {
   display: block;
 
   margin: auto;
@@ -231,7 +231,7 @@ main article div.page-image {
   box-sizing: border-box;
 }
 
-main article div.page-image .caption {
+main article figure.page-image .caption {
   margin-top: 0.5rem;
   font-size: 0.75rem;
   text-align: center;
@@ -242,7 +242,7 @@ main article img {
   height: auto;
 }
 
-main article .gallery p {
+main article .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
 
@@ -252,7 +252,7 @@ main article .gallery p {
   align-items: flex-start;
 }
 
-main article .gallery div.page-image {
+main article .gallery figure.page-image {
   width: auto;
   box-sizing: border-box;
   height: auto;
@@ -260,7 +260,7 @@ main article .gallery div.page-image {
 }
 
 @media (min-width: 640px) {
-  main article .gallery p {
+  main article .gallery {
     grid-template-columns: 1fr 1fr 1fr;
 
     gap: 2rem;

@@ -15,9 +15,24 @@ notes:
     - missing reporting options (min/max interval)
     - battery type is not detected, nor configurable, but assumed as alkaline
     - skewed percentage report for rechargeable NiMH batteries
+
+images:
+  frontPoweredOn:
+    alt: Nous E6 powered on
+    image: images/front-powered.jpg
+  openedBack:
+    alt: Nous E6 with opened back battery compartment
+    image: images/back-opened.jpg
+  packageFrontAndBack:
+    alt: Nous E6 box front and back
+    image: images/package-front-back.jpg
+  boxContents:
+    alt: Nous E6 box contents
+    image: images/package-contents.jpg
 ---
 
-![Nous E6 powered on](images/front-powered.jpg)
+::content-image{:alt="images.frontPoweredOn.alt" :image="images.frontPoweredOn.image"}
+::
 
 ## Precision
 
@@ -36,7 +51,8 @@ Notes:
 
 Device is powered by two AAA batteries.
 
-![Nous E6 with opened back battery compartment](images/back-opened.jpg)
+::content-image{:alt="images.openedBack.alt" :image="images.openedBack.image"}
+::
 
 Rechargeable 1.2V NiMH batteries work fine. I love this fact, because I am not producing waste by early replacement of batteries, when I want to be sure, that sensor used in automations won't go dead in a bad moment.
 
@@ -54,12 +70,13 @@ To be added:
 
 Box front and back:
 
-![Nous E6 box front and back](images/package-front-back.jpg)
+::content-image{:alt="images.packageFrontAndBack.alt" :image="images.packageFrontAndBack.image"}
+::
 
 Box contents:
 
-![Nous E6 box contents](images/package-contents.jpg)
-
+::content-image{:alt="images.boxContents.alt" :image="images.boxContents.image"}
+::
 
 ## Price
 

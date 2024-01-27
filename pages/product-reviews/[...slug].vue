@@ -7,7 +7,7 @@
           <span class="subtitle" v-if="doc.subtitle">{{ doc.subtitle }}</span>
         </h1>
 
-        <p v-if="doc.intro">{{doc.intro}}</p>
+        <p v-if="doc.intro">{{ doc.intro }}</p>
 
         <template v-if="doc.notes">
           <div class="proscons">
@@ -30,7 +30,9 @@
           </div>
         </template>
 
-        <ContentRenderer :value="doc"/>
+        <div class="markdown-content">
+          <ContentRenderer :value="doc"/>
+        </div>
 
         <p class="non-professional-review-disclaimer">
           <strong>Disclaimer: </strong>
