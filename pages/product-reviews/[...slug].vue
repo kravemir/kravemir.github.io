@@ -44,15 +44,15 @@
 </template>
 <script setup lang="ts">
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import { onMounted, onUnmounted } from 'vue'
+import {onMounted, onUnmounted} from 'vue'
 
-let lightbox: PhotoSwipeLightbox|null = null
+let lightbox: PhotoSwipeLightbox | null = null
 
 onMounted(() => {
   if (process.browser && !lightbox) {
     lightbox = new PhotoSwipeLightbox({
       gallery: 'main.product-review',
-      children: 'div.page-image a',
+      children: 'figure.page-image a',
       pswpModule: () => import('photoswipe'),
     });
     lightbox.init();
