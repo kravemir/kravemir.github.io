@@ -120,6 +120,10 @@ Solid nice paper box with a manual, stick and antenna inside:
 
 :image-gallery{:items="imageGallery.boxAndPackaging"}
 
+## Tips
+
+Can be hidden behind a TV in [combination with APC SurgeArrest PM1WU2-FR](/product-combos/sonoff-zbdongle-e-on-apc-pm1wu2-fr).
+
 ## Summary
 
 I am happy to trade compactness for great performance and reliability.

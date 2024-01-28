@@ -18,6 +18,15 @@
         </li>
       </ul>
     </ContentList>
+    <p>Product combos:</p>
+    <ContentList path="/product-combos/" v-slot="{ list }">
+      <ul class="product-combo-list" v-for="productCombo in list" :key="productCombo._path">
+        <li  v-for="productCombo in list" :key="productCombo._path">
+          <NuxtLink :to="productCombo._path">{{ productCombo.title + (productCombo.subtitle ? " - " + productCombo.subtitle : "")}}</NuxtLink>
+          <div class="intro" v-if="productCombo.intro">{{productCombo.intro}}</div>
+        </li>
+      </ul>
+    </ContentList>
   </main>
 </template>
 <style scoped>
@@ -38,6 +47,17 @@
 }
 
 .how-to-list li .intro {
+  margin-top: 0.25rem;
+
+  font-size: 0.875rem;
+}
+
+.product-combo-list {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.product-combo-list li .intro {
   margin-top: 0.25rem;
 
   font-size: 0.875rem;
