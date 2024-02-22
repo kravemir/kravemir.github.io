@@ -29,6 +29,9 @@ images:
   boxContents:
     alt: Nous E6 box contents
     image: images/package-contents.jpg
+  batteryDischargeCurveWith550mahEneloopLiteBatteries:
+    alt: Nous E6 battery discharge curve with 550 mAh eneloop lite batteries
+    image: images/battery-discharge-curve-with-550mah-eneloop-lite-batteries.jpg
 ---
 
 ::content-image{:alt="images.frontPoweredOn.alt" :image="images.frontPoweredOn.image"}
@@ -60,11 +63,12 @@ Unfortunately, device doesn't detect battery type is automatically - Alkaline vs
 
 ## Battery life
 
-To be added:
+First finisher at 1%, lasted **41 days on 550mAh** eneloop lite AAA batteries.
 
-- not tested long enough,
-- so far lasted over 2 weeks on 2x NiMH AAA batteries with decent (reported) percentage of battery charge left,
-- unfortunately, I had my HA history retention set to default 10 days, so I don't date of last battery change and need to re-run the test from full charge.
+::content-image{:alt="images.batteryDischargeCurveWith550mahEneloopLiteBatteries.alt" :image="images.batteryDischargeCurveWith550mahEneloopLiteBatteries.image"}
+::
+
+More results to be added.
 
 ## Package
 

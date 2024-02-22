@@ -95,7 +95,7 @@ It performs much better than Aeotec Zi-Stick ZGA008 as a coordinator.
 
 The Zi-Stick wasn't properly maintaining links to devices, if there wasn't "enough" routers. Even if battery powered devices were in reach of Sonoff ZBDongle-E used as a router, they sometimes lose their link if an extra router isn't added, even if that router doesn't have any links to end devices itself, and all routers can reach coordinator directly.
 
-The issue encountered with Zi-Stick didn't appear for Sonoff ZBDongle-E. On contrary, I even removed Mouse USB Repeater, and devices linked to it automatically roamed to the ZBDongle-E router or to the ZBDongle-E coordinator.
+The issue encountered with Zi-Stick didn't appear for Sonoff ZBDongle-E. On contrary, I even removed Moes USB Repeater, and devices linked to it automatically roamed to the ZBDongle-E router or to the ZBDongle-E coordinator.
 
 :image-gallery{:items="imageGallery.comparison"}
 
