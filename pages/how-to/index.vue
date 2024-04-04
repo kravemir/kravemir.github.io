@@ -2,8 +2,8 @@
   <main>
     <p>How to pages:</p>
     <ContentList path="/how-to/" v-slot="{ list }">
-      <ul class="how-to-list" v-for="howTo in list" :key="howTo._path">
-        <li  v-for="howTo in list" :key="howTo._path">
+      <ul class="how-to-list">
+        <li v-for="howTo in list" :key="howTo._path">
           <NuxtLink :to="howTo._path">{{ howTo.title + (howTo.subtitle ? " - " + howTo.subtitle : "")}}</NuxtLink>
           <div class="intro" v-if="howTo.intro">{{howTo.intro}}</div>
         </li>
