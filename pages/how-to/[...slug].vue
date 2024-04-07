@@ -1,18 +1,21 @@
 <template>
-  <main>
-    <ContentDoc v-slot="{ doc }">
+  <ContentDoc v-slot="{ doc }">
+    <WideHeaderLayout
+      title-category="How to"
+      v-bind:title="doc.title"
+      v-bind:subtitle="doc.subtitle"
+      v-bind:description="doc.description"
+    >
       <article>
-        <h1>
-          <div>How to</div>
-          {{ doc.title }}
-          <span class="subtitle" v-if="doc.subtitle">{{ doc.subtitle }}</span>
-        </h1>
-
-        <p v-if="doc.intro">{{doc.intro}}</p>
+        <div v-if="doc.intro">
+          <p v-for="p in (doc.intro.split('\n\n'))">
+            {{ p }}
+          </p>
+        </div>
 
         <p class="how-to-risk-disclaimer">
-            <strong>Disclaimer: </strong>
-            <span>
+          <strong>Disclaimer: </strong>
+          <span>
               This how to is intended for advanced users.
               You should be able to understand what commands are doing, before copy-pasting and executing them.
             </span>
@@ -20,14 +23,10 @@
 
         <ContentRenderer :value="doc"/>
       </article>
-    </ContentDoc>
-  </main>
+    </WideHeaderLayout>
+  </ContentDoc>
 </template>
 <style scoped>
-h1 div {
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
-}
 
 .how-to-risk-disclaimer {
   margin: 2rem 24% 2rem 2rem;
@@ -39,4 +38,5 @@ h1 div {
 }
 </style>
 <script setup lang="ts">
+import WideHeaderLayout from "~/components/layouts/WideHeaderLayout.vue";
 </script>

@@ -18,11 +18,7 @@
         </ul>
       </nav>
     </div>
-    <div>
-      <div class="container">
-        <NuxtPage/>
-      </div>
-    </div>
+    <NuxtPage/>
     <div class="flex-spacer"></div>
     <div class="footer">
       <div class="container">
@@ -92,9 +88,7 @@ nav.main-nav {
   align-items: flex-start;
 
   padding: 0.75rem 0;
-  margin: 1rem 0;
-
-  border-bottom: #879c8b solid 1px;
+  margin: 1rem 0 0;
 }
 
 @media (min-width: 640px) {

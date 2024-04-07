@@ -1,5 +1,5 @@
 <template>
-  <main class="product-review">
+  <BasicLayout>
     <ContentDoc v-slot="{ doc }">
       <article>
         <h1>
@@ -40,18 +40,19 @@
         </p>
       </article>
     </ContentDoc>
-  </main>
+  </BasicLayout>
 </template>
 <script setup lang="ts">
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import {onMounted, onUnmounted} from 'vue'
+import BasicLayout from "~/components/layouts/BasicLayout.vue";
 
 let lightbox: PhotoSwipeLightbox | null = null
 
 onMounted(() => {
   if (process.browser && !lightbox) {
     lightbox = new PhotoSwipeLightbox({
-      gallery: 'main.product-review',
+      gallery: 'main',
       children: 'figure.page-image a',
       pswpModule: () => import('photoswipe'),
     });

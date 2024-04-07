@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <BasicLayout>
     <p>Product combos:</p>
     <ContentList path="/product-combos/" v-slot="{ list }">
       <ul class="product-combo-list">
@@ -9,7 +9,7 @@
         </li>
       </ul>
     </ContentList>
-  </main>
+  </BasicLayout>
 </template>
 <style scoped>
 .product-combo-list {
@@ -23,3 +23,6 @@
   font-size: 0.875rem;
 }
 </style>
+<script setup lang="ts">
+import BasicLayout from "~/components/layouts/BasicLayout.vue";
+</script>

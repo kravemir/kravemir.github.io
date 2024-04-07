@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <BasicLayout>
     <ContentDoc />
     <hr />
     <p>Product reviews:</p>
@@ -11,7 +11,7 @@
         </li>
       </ul>
     </ContentList>
-  </main>
+  </BasicLayout>
 </template>
 <style scoped>
 .product-review-list {
@@ -25,3 +25,6 @@
   font-size: 0.875rem;
 }
 </style>
+<script setup lang="ts">
+import BasicLayout from "~/components/layouts/BasicLayout.vue";
+</script>
