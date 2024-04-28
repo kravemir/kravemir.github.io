@@ -97,7 +97,8 @@ The Zi-Stick wasn't properly maintaining links to devices, if there wasn't "enou
 
 The issue encountered with Zi-Stick didn't appear for Sonoff ZBDongle-E. On contrary, I even removed Moes USB Repeater, and devices linked to it automatically roamed to the ZBDongle-E router or to the ZBDongle-E coordinator.
 
-:image-gallery{:items="imageGallery.comparison"}
+::image-gallery{:items="imageGallery.comparison"}
+::
 
 ## Aesthetics
 
@@ -112,13 +113,15 @@ However, Sonoff made it look quite nice even if it's big and bulky.
 
 Disassembled device looks like this:
 
-:image-gallery{:items="imageGallery.internals"}
+::image-gallery{:items="imageGallery.internals"}
+::
 
 ## Box and packaging
 
 Solid nice paper box with a manual, stick and antenna inside:
 
-:image-gallery{:items="imageGallery.boxAndPackaging"}
+::image-gallery{:items="imageGallery.boxAndPackaging"}
+::
 
 ## Tips
 

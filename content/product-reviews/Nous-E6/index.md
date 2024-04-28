@@ -29,9 +29,15 @@ images:
   boxContents:
     alt: Nous E6 box contents
     image: images/package-contents.jpg
-  batteryDischargeCurveWith550mahEneloopLiteBatteries:
-    alt: Nous E6 battery discharge curve with 550 mAh eneloop lite batteries
-    image: images/battery-discharge-curve-with-550mah-eneloop-lite-batteries.jpg
+
+imageGallery:
+  batteryLife:
+    - name: Nous E6 battery discharge curve with 550 mAh eneloop lite batteries
+      image: images/battery-discharge-curve-with-550mah-eneloop-lite-batteries.jpg
+      caption: 550mAh eneloop batteries
+    - name: Nous E6 battery discharge curve with 550 mAh eneloop lite batteries (run 02)
+      image: images/battery-discharge-curve-with-550mah-eneloop-lite-batteries-run-02.jpg
+      caption: 550mAh eneloop batteries (run 02)
 ---
 
 ::content-image{:alt="images.frontPoweredOn.alt" :image="images.frontPoweredOn.image"}
@@ -63,9 +69,12 @@ Unfortunately, device doesn't detect battery type is automatically - Alkaline vs
 
 ## Battery life
 
-First finisher at 1%, lasted **41 days on 550mAh** eneloop lite AAA batteries.
+Test runs:
 
-::content-image{:alt="images.batteryDischargeCurveWith550mahEneloopLiteBatteries.alt" :image="images.batteryDischargeCurveWith550mahEneloopLiteBatteries.image"}
+- **41 days** (over a month) on **550mAh** eneloop lite AAA batteries from fully charged to 1%,
+- **81 days** (over 2 months) on **550mAh** eneloop lite AAA batteries from fully charged to 1%.
+
+::image-gallery{:items="imageGallery.batteryLife"}
 ::
 
 More results to be added.
