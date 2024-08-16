@@ -91,11 +91,25 @@ Box contents:
 ::content-image{:alt="images.boxContents.alt" :image="images.boxContents.image"}
 ::
 
+## Alternative names and variants
+
+This looks like an ODM product, and I've found similar products:
+
+- GIRIER Tuya Smart ZigBee Temperature and Humidity:
+    - looks the same, even same batteries included, but without Nous logos,
+    - I didn't test them side by side (yet), whether temperature sensor is the same, neither I have disassembled them to compare internal
+- Niceboy ION ORBIS Meteo+:
+    - product photos look same, but with different logo,
+    - I didn't purchase it, just noting down.
+
+
 ## Price
 
-Great.
+Good to great (if discounted).
 
 One local seller offers them at 15.99€ at sporadic deals. This is close to local prices of display-less button-battery-powered sensors.
+
+The AliExpress one is much cheaper at non-discounted prices, though. But, with longer delivery time, and without benefits of local laws for strong customer protection.
 
 ## Summary
 
