@@ -29,7 +29,7 @@
             <NuxtLink to="https://github.com/kravemir" rel="me">github.com/kravemir</NuxtLink>
           </div>
           <div class="me-link">
-            <NuxtLink to="https://hometech.social/@kravemir" rel="me">hometech.social/@kravemir</NuxtLink>
+            <NuxtLink to="https://fosstodon.org/@kravemir" rel="me">fosstodon.org/@kravemir</NuxtLink>
           </div>
         </div>
       </div>
