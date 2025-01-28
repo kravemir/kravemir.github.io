@@ -287,6 +287,11 @@ main article code {
   padding: 0.125rem 0.25rem;
 }
 
+iframe[src*="youtube"] {
+  aspect-ratio: 16 / 9;
+  height: auto !important;
+  max-width: 100% !important;
+}
 </style>
 <script setup lang="ts">
 import 'photoswipe/style.css';

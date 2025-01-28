@@ -38,7 +38,7 @@ Notes:
 Powering MC8RE-V2 via Arduino:
 
 - "positive electrode" to Arduino's 5V:
-  - **danger:** check with your manual, mine states power supply to be of 4.5V to 6V,
+  - **caution:** check with your manual, mine states power supply to be of 4.5V to 6V,
 - "negative electrode" to Arduino's GND.
 
 Providing signals from MC8RE-V2 to Arduino:
@@ -108,13 +108,28 @@ For the full solution, I've decided to create:
 The sketch for reading all 7 PWM signals read via interrupts:
 
 ```cpp
+
 class InterruptPWMTracker {
   public:
     volatile unsigned long lastRaising;
     volatile unsigned long durationUp;
     volatile unsigned long durationCycle;
 
-    void updateFromPinChangeInterrupt(int pin) {
+    const int pin;
+    void(*callback)(void);
+
+
+    InterruptPWMTracker(int pin, void(*callback)(void)):
+      pin(pin),
+      callback(callback)
+    {}
+
+    void setup() {
+      pinMode(pin, INPUT);
+      attachInterrupt(digitalPinToInterrupt(pin), callback, CHANGE);
+    }
+
+    void updateFromPinChangeInterrupt() {
       unsigned long current_micros = micros();
       int state = digitalRead(pin);
 
@@ -129,34 +144,15 @@ class InterruptPWMTracker {
 
 const int channelCount = 7;
 
-// this doesn't need to be an array, but for the flexibility of different wiring needs
-const int channelPin[channelCount] = {
-  2,
-  3,
-  4,
-  5,
-  6,
-  7,
-  8
-};
-
-
-InterruptPWMTracker channels[channelCount];
+// this has cyclic depedendency on callback functions, so will be initialized after them
+extern InterruptPWMTracker channels[channelCount];
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
 
   for (int i = 0; i < channelCount; i++) {
-    pinMode(channelPin[i], INPUT);
+    channels[i].setup();
   }
-
-  attachInterrupt(digitalPinToInterrupt(channelPin[0]), channel1onChangeInterrupt, CHANGE);
-  attachInterrupt(digitalPinToInterrupt(channelPin[1]), channel2onChangeInterrupt, CHANGE);
-  attachInterrupt(digitalPinToInterrupt(channelPin[2]), channel3onChangeInterrupt, CHANGE);
-  attachInterrupt(digitalPinToInterrupt(channelPin[3]), channel4onChangeInterrupt, CHANGE);
-  attachInterrupt(digitalPinToInterrupt(channelPin[4]), channel5onChangeInterrupt, CHANGE);
-  attachInterrupt(digitalPinToInterrupt(channelPin[5]), channel6onChangeInterrupt, CHANGE);
-  attachInterrupt(digitalPinToInterrupt(channelPin[6]), channel7onChangeInterrupt, CHANGE);
 }
 
 void loop() {
@@ -171,45 +167,59 @@ void loop() {
   Serial.println();
   Serial.println();
 
-  delay(250);
+  delay(50);
 }
 
 void printChannelToSerial(int number) {
   Serial.print("CH");
   Serial.print(number + 1);
   Serial.print(" ");
+  if (channels[number].durationUp < 1000) {
+    Serial.print(" ");
+  }
   Serial.print(channels[number].durationUp);
   Serial.print("/");
   Serial.print(channels[number].durationCycle);
 }
 
 void channel1onChangeInterrupt() {
-  channels[0].updateFromPinChangeInterrupt(channelPin[0]);
+  channels[0].updateFromPinChangeInterrupt();
 }
 
 void channel2onChangeInterrupt() {
-  channels[1].updateFromPinChangeInterrupt(channelPin[1]);
+  channels[1].updateFromPinChangeInterrupt();
 }
 
 void channel3onChangeInterrupt() {
-  channels[2].updateFromPinChangeInterrupt(channelPin[2]);
+  channels[2].updateFromPinChangeInterrupt();
 }
 
 void channel4onChangeInterrupt() {
-  channels[3].updateFromPinChangeInterrupt(channelPin[3]);
+  channels[3].updateFromPinChangeInterrupt();
 }
 
 void channel5onChangeInterrupt() {
-  channels[4].updateFromPinChangeInterrupt(channelPin[4]);
+  channels[4].updateFromPinChangeInterrupt();
 }
 
 void channel6onChangeInterrupt() {
-  channels[5].updateFromPinChangeInterrupt(channelPin[5]);
+  channels[5].updateFromPinChangeInterrupt();
 }
 
 void channel7onChangeInterrupt() {
-  channels[6].updateFromPinChangeInterrupt(channelPin[6]);
+  channels[6].updateFromPinChangeInterrupt();
 }
+
+
+InterruptPWMTracker channels[channelCount] = {
+  InterruptPWMTracker(2, channel1onChangeInterrupt),
+  InterruptPWMTracker(3, channel2onChangeInterrupt),
+  InterruptPWMTracker(4, channel3onChangeInterrupt),
+  InterruptPWMTracker(5, channel4onChangeInterrupt),
+  InterruptPWMTracker(6, channel5onChangeInterrupt),
+  InterruptPWMTracker(7, channel6onChangeInterrupt),
+  InterruptPWMTracker(8, channel7onChangeInterrupt),
+};
 ```
 
 The output is something like this:
@@ -217,21 +227,27 @@ The output is something like this:
 ```log
 ...
 
-CH1 1599/14000 CH2 1026/14000 CH3 1986/14000 CH4 1064/14000 CH5 992/14000 CH6 992/14000 CH7 1989/14000
+CH1 1599/14000 CH2 1026/14000 CH3 1986/14000 CH4 1064/14000 CH5  992/14000 CH6  992/14000 CH7 1989/14000
 
-CH1 1980/14000 CH2 1315/14000 CH3 1980/14000 CH4 982/14000 CH5 992/14000 CH6 993/14000 CH7 1993/14000
+CH1 1980/14000 CH2 1315/14000 CH3 1980/14000 CH4  982/14000 CH5  992/14000 CH6  993/14000 CH7 1993/14000
 
-CH1 1977/14000 CH2 1624/14000 CH3 1653/14000 CH4 981/14000 CH5 992/14000 CH6 993/14000 CH7 1989/14000
+CH1 1977/14000 CH2 1624/14000 CH3 1653/14000 CH4  981/14000 CH5  992/14000 CH6  993/14000 CH7 1989/14000
 
-CH1 1871/14000 CH2 1959/14000 CH3 976/14000 CH4 1044/14000 CH5 996/14000 CH6 996/14000 CH7 1989/14000
+CH1 1871/14000 CH2 1959/14000 CH3  976/14000 CH4 1044/14000 CH5  996/14000 CH6  996/14000 CH7 1989/14000
 
-CH1 1482/14000 CH2 1999/14000 CH3 972/14000 CH4 1643/14000 CH5 993/14000 CH6 992/14000 CH7 1992/14000
+CH1 1482/14000 CH2 1999/14000 CH3  972/14000 CH4 1643/14000 CH5  993/14000 CH6  992/14000 CH7 1992/14000
 
-CH1 979/14000 CH2 1873/14000 CH3 997/14000 CH4 1976/14000 CH5 995/14000 CH6 994/14000 CH7 1993/14000
+CH1  979/14000 CH2 1873/14000 CH3  997/14000 CH4 1976/14000 CH5  995/14000 CH6  994/14000 CH7 1993/14000
 
-CH1 988/14000 CH2 1326/14000 CH3 1738/14000 CH4 1776/14000 CH5 992/14000 CH6 992/14000 CH7 1989/14000
+CH1  988/14000 CH2 1326/14000 CH3 1738/14000 CH4 1776/14000 CH5  992/14000 CH6  992/14000 CH7 1989/14000
 
-CH1 1169/14000 CH2 1046/14000 CH3 1984/14000 CH4 1474/14000 CH5 992/14000 CH6 993/14000 CH7 1989/14000
+CH1 1169/14000 CH2 1046/14000 CH3 1984/14000 CH4 1474/14000 CH5  992/14000 CH6  993/14000 CH7 1989/14000
 
 ...
 ```
+
+## Demonstration
+
+This video shows how it works:
+
+<iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/dhIuF_4Sl8g?si=55N7XMM-XG74lMD9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
