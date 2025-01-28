@@ -251,3 +251,23 @@ CH1 1169/14000 CH2 1046/14000 CH3 1984/14000 CH4 1474/14000 CH5  992/14000 CH6  
 This video shows how it works:
 
 <iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/dhIuF_4Sl8g?si=55N7XMM-XG74lMD9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Alternative - ESP32 programmed with Arduino 
+
+The code above works also on ESP32 with just pins change to:
+
+```
+InterruptPWMTracker channels[channelCount] = {
+  InterruptPWMTracker(2, channel1onChangeInterrupt),
+  InterruptPWMTracker(3, channel2onChangeInterrupt),
+  InterruptPWMTracker(4, channel3onChangeInterrupt),
+  InterruptPWMTracker(5, channel4onChangeInterrupt),
+  InterruptPWMTracker(6, channel5onChangeInterrupt),
+  InterruptPWMTracker(7, channel6onChangeInterrupt),
+  InterruptPWMTracker(8, channel7onChangeInterrupt),
+};
+```
+
+Demonstration with ESP32:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SgEUJ-Az4Cs?si=yX_WKPSbyzg8ZlcN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
