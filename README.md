@@ -25,6 +25,9 @@ Build the application for production:
 
 ```bash
 pnpm run build
+
+# preview built files
+npx serve .output/public
 ```
 
 Locally preview production build:
