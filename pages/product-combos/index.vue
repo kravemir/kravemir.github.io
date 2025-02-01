@@ -2,9 +2,12 @@
   <BasicLayout>
     <p>Product combos:</p>
     <ContentList path="/product-combos/" v-slot="{ list }">
-      <ul class="product-combo-list">
+      <ul class="generic-link-list product-combo-list">
         <li v-for="productCombo in list" :key="productCombo._path">
-          <NuxtLink :to="productCombo._path">{{ productCombo.title + (productCombo.subtitle ? " - " + productCombo.subtitle : "")}}</NuxtLink>
+          <NuxtLink :to="productCombo._path">
+            {{ productCombo.title}}
+            <span class="subtitle" v-if="productCombo.subtitle">{{productCombo.subtitle}}</span>
+          </NuxtLink>
           <div class="intro" v-if="productCombo.intro">{{productCombo.intro}}</div>
         </li>
       </ul>

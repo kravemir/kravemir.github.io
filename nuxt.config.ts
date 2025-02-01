@@ -30,4 +30,6 @@ export default defineNuxtConfig({
   extends: [
     'node_modules/nuxt-content-assets/cache',
   ],
+
+  compatibilityDate: '2025-02-01',
 })

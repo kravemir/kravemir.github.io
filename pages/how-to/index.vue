@@ -2,9 +2,12 @@
   <BasicLayout>
     <p>How to pages:</p>
     <ContentList path="/how-to/" v-slot="{ list }">
-      <ul class="how-to-list">
+      <ul class="generic-link-list how-to-list">
         <li v-for="howTo in list" :key="howTo._path">
-          <NuxtLink :to="howTo._path">{{ howTo.title + (howTo.subtitle ? " - " + howTo.subtitle : "")}}</NuxtLink>
+          <NuxtLink :to="howTo._path">
+            {{ howTo.title}}
+            <span class="subtitle" v-if="howTo.subtitle">{{howTo.subtitle}}</span>
+          </NuxtLink>
           <div class="intro" v-if="howTo.description">{{howTo.description}}</div>
           <div class="intro" v-if="howTo.intro && !howTo.description">{{howTo.intro}}</div>
         </li>

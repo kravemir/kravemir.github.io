@@ -293,6 +293,31 @@ iframe[src*="youtube"] {
   height: auto !important;
   max-width: 100% !important;
 }
+
+.generic-link-list a,
+.generic-link-list a:visited {
+  font-weight: bold;
+  text-decoration: none;
+  color: #345c3c;
+}
+
+.generic-link-list a .subtitle,
+.generic-link-list .subtitle {
+  display: block;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #6f9e78;
+  margin-top: 0.25rem;
+}
+
+.generic-link-list  {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.generic-link-list  li {
+  margin-bottom: 1rem;
+}
 </style>
 <script setup lang="ts">
 import 'photoswipe/style.css';

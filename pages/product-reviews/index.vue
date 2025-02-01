@@ -4,9 +4,12 @@
     <hr />
     <p>Product reviews:</p>
     <ContentList path="/product-reviews/" v-slot="{ list }">
-      <ul class="product-review-list">
+      <ul class="generic-link-list product-review-list">
         <li v-for="productReview in list" :key="productReview._path">
-          <NuxtLink :to="productReview._path">{{ productReview.title + (productReview.subtitle ? " - " + productReview.subtitle : "")}}</NuxtLink>
+          <NuxtLink :to="productReview._path">
+            {{ productReview.title}}
+            <span class="subtitle" v-if="productReview.subtitle">{{productReview.subtitle}}</span>
+          </NuxtLink>
           <div class="intro" v-if="productReview.intro">{{productReview.intro}}</div>
         </li>
       </ul>
