@@ -15,18 +15,24 @@ images:
   cover:
     alt: ESP32, Breadboard, MC8RE, MC8B-Mini, 160KG servo, 20KG servo
     image: images/cover.jpg
+  wiringHigh:
+    alt: Wiring of EPS32, MC8RE and servos from high,
+    image: images/wiring_high.jpg
+    caption: Wiring from high
+  wiringLow:
+    alt: Wiring of EPS32, MC8RE and servos from low,
+    image: images/wiring_low.jpg
+    caption: Wiring from low
+  wiringMC8RESbusInvertor:
+    alt: MC8RE SBUS output hardware signal inversion
+    image: images/mc8re_sbus_signal_inversion.png
+    caption: SBUS HW Invertor
     
 imageGallery:
   wiring:
-    - name: Wiring of EPS32, MC8RE and servos from high,
-      image: images/wiring_high.jpg
-      caption: Wiring from high
-    - name: Wiring of EPS32, MC8RE and servos from low,
-      image: images/wiring_low.jpg
-      caption: Wiring from low
-    - name: MC8RE SBUS output hardware signal inversion
-      image: images/mc8re_sbus_signal_inversion.png
-      caption: SBUS HW Invertor
+    - wiringHigh
+    - wiringLow
+    - wiringMC8RESbusInvertor
 ---
 
 ::content-image{:alt="images.cover.alt" :image="images.cover.image"}

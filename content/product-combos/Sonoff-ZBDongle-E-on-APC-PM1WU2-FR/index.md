@@ -7,21 +7,22 @@ images:
     image: images/hidden-behind-tv.jpg
 
 imageGallery:
-  - name: Front view of Sonoff ZBDongle-E on APC SurgeArrest PM1WU2-FR combination
-    image: images/front.jpg
-    caption: Front view
-  - name: Side angle view of Sonoff ZBDongle-E on APC SurgeArrest PM1WU2-FR combination
-    image: images/front-side-angle.jpg
-    caption: Side Angle view
-  - name: Side view of Sonoff ZBDongle-E on APC SurgeArrest PM1WU2-FR combination
-    image: images/side.jpg
-    caption: Side view
-  - name: Top angle view of Sonoff ZBDongle-E on APC SurgeArrest PM1WU2-FR combination
-    image: images/top-front-side-angle.jpg
-    caption: Top angle view
-  - name: Bottom angle view of Sonoff ZBDongle-E on APC SurgeArrest PM1WU2-FR combination
-    image: images/bottom-front-side-angle.jpg
-    caption: Bottom angle view
+  photos:
+    - name: Front view of Sonoff ZBDongle-E on APC SurgeArrest PM1WU2-FR combination
+      image: images/front.jpg
+      caption: Front view
+    - name: Side angle view of Sonoff ZBDongle-E on APC SurgeArrest PM1WU2-FR combination
+      image: images/front-side-angle.jpg
+      caption: Side Angle view
+    - name: Side view of Sonoff ZBDongle-E on APC SurgeArrest PM1WU2-FR combination
+      image: images/side.jpg
+      caption: Side view
+    - name: Top angle view of Sonoff ZBDongle-E on APC SurgeArrest PM1WU2-FR combination
+      image: images/top-front-side-angle.jpg
+      caption: Top angle view
+    - name: Bottom angle view of Sonoff ZBDongle-E on APC SurgeArrest PM1WU2-FR combination
+      image: images/bottom-front-side-angle.jpg
+      caption: Bottom angle view
 ---
 
 Products:
@@ -31,7 +32,7 @@ Products:
 
 Photos of the combination:
 
-:image-gallery{:items="imageGallery"}
+:image-gallery{:items="imageGallery.photos"}
 
 One of ideal placements is behind a TV to protect TV from surges, and power and hide Sonoff ZBDongle-E as a router:
 

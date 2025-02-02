@@ -299,6 +299,14 @@ iframe[src*="youtube"] {
   font-weight: bold;
   text-decoration: none;
   color: #345c3c;
+  display: block;
+}
+
+.generic-link-list a:hover,
+.generic-link-list a:focus,
+.generic-link-list a:visited:focus,
+.generic-link-list a:visited:hover {
+  color: #249c2f;
 }
 
 .generic-link-list a .subtitle,
@@ -308,6 +316,11 @@ iframe[src*="youtube"] {
   font-weight: bold;
   color: #6f9e78;
   margin-top: 0.25rem;
+}
+
+.generic-link-list a:hover .subtitle,
+.generic-link-list a:focus .subtitle{
+  color: #a8e1b5;
 }
 
 .generic-link-list  {

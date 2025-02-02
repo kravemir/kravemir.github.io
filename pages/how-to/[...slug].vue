@@ -39,4 +39,7 @@
 </style>
 <script setup lang="ts">
 import WideHeaderLayout from "~/components/layouts/WideHeaderLayout.vue";
+import usePhotoSwipe from "~/shared/usePhotoSwipe";
+
+usePhotoSwipe();
 </script>

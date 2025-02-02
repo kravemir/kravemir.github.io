@@ -29,15 +29,19 @@ images:
   boxContents:
     alt: Nous E6 box contents
     image: images/package-contents.jpg
+  dischargeCurve01:
+    alt: Nous E6 battery discharge curve with 550 mAh eneloop lite batteries
+    image: images/battery-discharge-curve-with-550mah-eneloop-lite-batteries.jpg
+    caption: 550mAh eneloop batteries
+  dischargeCurve02:
+    alt: Nous E6 battery discharge curve with 550 mAh eneloop lite batteries (run 02)
+    image: images/battery-discharge-curve-with-550mah-eneloop-lite-batteries-run-02.jpg
+    caption: 550mAh eneloop batteries (run 02)
 
 imageGallery:
   batteryLife:
-    - name: Nous E6 battery discharge curve with 550 mAh eneloop lite batteries
-      image: images/battery-discharge-curve-with-550mah-eneloop-lite-batteries.jpg
-      caption: 550mAh eneloop batteries
-    - name: Nous E6 battery discharge curve with 550 mAh eneloop lite batteries (run 02)
-      image: images/battery-discharge-curve-with-550mah-eneloop-lite-batteries-run-02.jpg
-      caption: 550mAh eneloop batteries (run 02)
+    - dischargeCurve01
+    - dischargeCurve02
 ---
 
 ::content-image{:alt="images.frontPoweredOn.alt" :image="images.frontPoweredOn.image"}
