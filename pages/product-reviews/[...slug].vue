@@ -81,5 +81,3 @@ usePhotoSwipe();
   font-weight: 600;
 }
 </style>
-<script setup lang="ts">
-</script>

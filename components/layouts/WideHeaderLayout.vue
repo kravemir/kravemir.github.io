@@ -18,6 +18,8 @@
   </main>
 </template>
 <script setup lang="ts">
+import getCoverImageInfo from "#shared/getCoverImageInfo";
+
 const props = defineProps({
   titleCategory: {
     type: String,
@@ -36,6 +38,17 @@ const props = defineProps({
     default: undefined,
   },
 })
+
+const {page} = useContent()
+const coverImageInfo = computed(() => getCoverImageInfo(page.value))
+
+if(coverImageInfo.value) {
+  useSeoMeta({
+    ogImage:  `${process.env.BASE_URL ?? 'http://localhost:3000'}${coverImageInfo.value.src}`,
+    ogImageWidth: coverImageInfo.value.width,
+    ogImageHeight:  coverImageInfo.value.height
+  })
+}
 </script>
 <style scoped>
 .header {

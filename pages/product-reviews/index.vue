@@ -6,6 +6,7 @@
     <ContentList path="/product-reviews/" v-slot="{ list }">
       <ul class="generic-link-list product-review-list">
         <li v-for="productReview in list" :key="productReview._path">
+          <ListItemCoverImageThumbnail :document="productReview"/>
           <NuxtLink :to="productReview._path">
             {{ productReview.title}}
             <span class="subtitle" v-if="productReview.subtitle">{{productReview.subtitle}}</span>
@@ -17,11 +18,6 @@
   </BasicLayout>
 </template>
 <style scoped>
-.product-review-list {
-  list-style-type: none;
-  padding-left: 20px;
-}
-
 .product-review-list li .intro {
   margin-top: 0.25rem;
 

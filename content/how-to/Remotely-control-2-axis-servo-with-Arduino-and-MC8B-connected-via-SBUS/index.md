@@ -11,10 +11,12 @@ intro: |
   
   In this guide, all the things are integrated together to achieve the above.
 
+coverImage: components
+
 images:
-  cover:
+  components:
     alt: ESP32, Breadboard, MC8RE, MC8B-Mini, 160KG servo, 20KG servo
-    image: images/cover.jpg
+    image: images/components.jpg
   wiringHigh:
     alt: Wiring of EPS32, MC8RE and servos from high,
     image: images/wiring_high.jpg
@@ -35,7 +37,7 @@ imageGallery:
     - wiringMC8RESbusInvertor
 ---
 
-::content-image{:alt="images.cover.alt" :image="images.cover.image"}
+::content-image{:alt="images.components.alt" :image="images.components.image"}
 ::
 
 ## Prerequisites

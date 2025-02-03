@@ -9,6 +9,8 @@ intro: |
   
   This guide approaches the goal by using interrupts to read all 7 PWM signals from MC8RE without blocking the execution of the loop - by storing timestamps about pin state changes and derived durations with tiny interrupt handling functions, called Interrupt Service Routines.
 
+coverImage: remote-with-receiver-and-arduino-due
+
 images:
   remote-with-receiver-and-arduino-due:
     alt: Microzone MC8B-mini with MC8RE and Arduino Due

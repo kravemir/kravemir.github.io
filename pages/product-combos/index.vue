@@ -4,6 +4,7 @@
     <ContentList path="/product-combos/" v-slot="{ list }">
       <ul class="generic-link-list product-combo-list">
         <li v-for="productCombo in list" :key="productCombo._path">
+          <ListItemCoverImageThumbnail :document="productCombo"/>
           <NuxtLink :to="productCombo._path">
             {{ productCombo.title}}
             <span class="subtitle" v-if="productCombo.subtitle">{{productCombo.subtitle}}</span>
@@ -15,11 +16,6 @@
   </BasicLayout>
 </template>
 <style scoped>
-.product-combo-list {
-  list-style-type: none;
-  padding-left: 20px;
-}
-
 .product-combo-list li .intro {
   margin-top: 0.25rem;
 

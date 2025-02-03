@@ -16,6 +16,8 @@ notes:
     - battery type is not detected, nor configurable, but assumed as alkaline
     - skewed percentage report for rechargeable NiMH batteries
 
+coverImage: frontPoweredOn
+
 images:
   frontPoweredOn:
     alt: Nous E6 powered on

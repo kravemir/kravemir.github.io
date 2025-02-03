@@ -1,25 +1,28 @@
 <template>
   <figure class="page-image">
-    <NuxtLink
-      :to="info.src"
-      target="_blank"
-      :data-pswp-width="info.width"
-      :data-pswp-height="info.height"
-      class="page-image"
-    >
-      <NuxtPicture
-        format="webp,jpeg"
-        :src="info.src"
-        :alt="alt"
-        :width="info.width"
-        :height="info.height"
-      />
-    </NuxtLink>
-    <div class="caption">{{ caption !== undefined ? caption : alt }}</div>
+    <div class="inner-container">
+      <NuxtLink
+        :to="info.src"
+        target="_blank"
+        :data-pswp-width="info.width"
+        :data-pswp-height="info.height"
+        class="page-image"
+      >
+        <NuxtPicture
+          format="webp,jpeg"
+          :src="info.src"
+          :alt="alt"
+          :width="info.width"
+          :height="info.height"
+          sizes="100vw sm:540px"
+        />
+      </NuxtLink>
+      <div class="caption">{{ caption !== undefined ? caption : alt }}</div>
+    </div>
   </figure>
 </template>
 <script setup lang="ts">
-import { computed } from 'vue'
+import {computed} from 'vue'
 
 const props = defineProps({
   image: {

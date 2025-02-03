@@ -216,13 +216,25 @@ li li li {
   margin: 0.25rem;
 }
 
+main {
+  overflow-x: hidden;
+}
+
+main article p  {
+  overflow-wrap: break-word;
+}
+
 main article figure.page-image {
   display: block;
 
+  margin: 0;
+  padding: 1.25rem 2rem;
+}
+
+main article figure.page-image .inner-container {
   margin: auto;
-  width: 600px;
+  width: 540px;
   max-width: 100%;
-  padding: 1rem 2rem;
   box-sizing: border-box;
 }
 
@@ -235,6 +247,9 @@ main article figure.page-image .caption {
 main article img {
   max-width: 100%;
   height: auto;
+
+  border-radius: 0.25rem;
+  overflow: hidden;
 }
 
 main article .gallery {
@@ -252,6 +267,11 @@ main article .gallery figure.page-image {
   box-sizing: border-box;
   height: auto;
   padding: 0;
+}
+
+main article .gallery figure.page-image .inner-container {
+  width: auto;
+  height: auto;
 }
 
 @media (min-width: 640px) {
@@ -292,6 +312,20 @@ iframe[src*="youtube"] {
   aspect-ratio: 16 / 9;
   height: auto !important;
   max-width: 100% !important;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+ul.generic-link-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+@media (min-width: 640px) {
+  ul.generic-link-list {
+    list-style-type: none;
+    padding-left: 20px;
+  }
 }
 
 .generic-link-list a,
@@ -328,8 +362,49 @@ iframe[src*="youtube"] {
   margin-bottom: 2rem;
 }
 
-.generic-link-list  li {
+.generic-link-list li {
+  margin-bottom: 0;
+}
+
+.generic-link-list li:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.generic-link-list .cover-image {
+  float: right;
+  margin: 0 0 0.75rem 1rem;
+
+  width: 100px;
+  height: 75px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.generic-link-list .cover-image:empty {
+  display: none;
+}
+
+.generic-link-list li > *:last-child {
   margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .generic-link-list .cover-image:empty {
+    display: block;
+  }
+}
+
+.generic-link-list .cover-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: rgb(228, 228, 228);
 }
 </style>
 <script setup lang="ts">

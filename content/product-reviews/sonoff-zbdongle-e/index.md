@@ -15,6 +15,8 @@ notes:
     - even longer with the external antenna
     - standing out if placed in plain sight
 
+coverImage: stickWithAntenna
+
 images:
   stickWithoutAntenna:
     alt: Sonoff ZBDongle-E USB Stick with detached antenna
