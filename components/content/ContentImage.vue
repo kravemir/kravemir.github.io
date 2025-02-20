@@ -1,7 +1,7 @@
 <template>
   <figure class="page-image">
     <div class="inner-container">
-      <NuxtLink
+      <ImageLink
         :to="info.src"
         target="_blank"
         :data-pswp-width="info.width"
@@ -16,7 +16,7 @@
           :height="info.height"
           sizes="100vw sm:540px"
         />
-      </NuxtLink>
+      </ImageLink>
       <div class="caption">{{ caption !== undefined ? caption : alt }}</div>
     </div>
   </figure>

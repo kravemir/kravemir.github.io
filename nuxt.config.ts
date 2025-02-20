@@ -2,6 +2,15 @@
 export default defineNuxtConfig({
   devtools: {enabled: true},
 
+  experimental: {
+    viewTransition: false,
+    defaults: {
+      nuxtLink: {
+        trailingSlash: 'append',
+      },
+    },
+  },
+
   modules: [
     'nuxt-content-assets', // must be before content!
     '@nuxt/content',

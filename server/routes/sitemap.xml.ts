@@ -31,7 +31,7 @@ export default defineEventHandler(async (event) => {
     )
 
     sitemap.write({
-      url: doc._path,
+      url: doc._path + (doc._path == "/" ? "" : "/"),
       img: [...images, ...imagesFromGallery],
     })
   }
