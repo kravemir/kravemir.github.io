@@ -17,11 +17,6 @@
   </BasicLayout>
 </template>
 <style scoped>
-.how-to-list li .intro {
-  margin-top: 0.25rem;
-
-  font-size: 0.875rem;
-}
 </style>
 <script setup lang="ts">
 import BasicLayout from "~/components/layouts/BasicLayout.vue";

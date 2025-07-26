@@ -1,0 +1,60 @@
+---
+import {Image} from 'astro:assets';
+import {getCollection} from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import {SITE_DESCRIPTION, SITE_TITLE} from '../../consts';
+
+const posts = (await getCollection('howTo'));
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+    <style>
+        .how-to-list li .intro {
+            margin-top: 0.25rem;
+
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+<Header/>
+<main>
+    <p>How to pages:</p>
+    <section>
+        <ul class="generic-link-list how-to-list">
+            {
+                posts.map((howTo) => (
+                        <li>
+                            { howTo.data.coverImage && howTo.data.images[howTo.data.coverImage] && (
+                                    <div>{JSON.stringify(howTo.data.images[howTo.data.coverImage])}</div>
+                                    <div :class="'cover-image'">
+                                    </div>
+                            )}
+                            <a href={`/how-to/${howTo.id}/`}>
+                                {howTo.data.title}
+                                <span class="subtitle" v-if="howTo.subtitle">{howTo.subtitle}</span>
+                            </a>
+                            {
+                                howTo.data.description ?
+                                        <div class="intro">{howTo.data.description}</div>
+                                    : howTo.data.intro ?
+                                                <div class="intro">{howTo.data.intro}</div>
+                                        :
+                                        ""
+
+                            }
+                        </li>
+                ))
+            }
+        </ul>
+    </section>
+</main>
+<Footer/>
+</body>
+</html>

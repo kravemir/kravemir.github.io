@@ -20,9 +20,18 @@ images:
     caption: Closer look
 ---
 
+import ContentImage from "src/components/content/Image.astro";
+import { Image } from 'astro:assets';
+import img from "./images/closer_look.jpg"
 
-::content-image{:alt="images.closerLook.alt" :image="images.closerLook.image"}
-::
+<ContentImage alt={frontmatter.images.closerLook.alt} image={frontmatter.images.closerLook.image}/>
+
+<div>{JSON.stringify(frontmatter)}</div>
+
+![aaa](images/closer_look.jpg)
+<Image src={img} alt="asdas" layout='constrained'  />
+
+[//]: # (::)
 
 ## Prerequisites
 
@@ -32,8 +41,9 @@ Main parts:
 - WeAct 4.2" Epaper module,
 - other wiring ingredients of yours choice.
 
-::content-image{:alt="images.components.alt" :image="images.components.image"}
-::
+[//]: # (::content-image{:alt="images.components.alt" :image="images.components.image"})
+
+[//]: # (::)
 
 # Wiring
 
@@ -48,14 +58,15 @@ Connecting ESP32 development board and Epaper Module:
 - GND - GND
 - 3V3 - VCC
 
-::content-image{:alt="images.wiring.alt" :image="images.wiring.image"}
-::
+[//]: # (::content-image{:alt="images.wiring.alt" :image="images.wiring.image"})
+
+[//]: # (::)
 
 ## Full source code for ESP32
 
 Source code:
 
-```
+```cpp
 #define ENABLE_GxEPD2_GFX 0
 
 #include <GxEPD2_BW.h>
