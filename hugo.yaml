@@ -1,0 +1,5 @@
+baseURL: https://kravemir.org/
+languageCode: en-us
+title: kravemir.org
+
+theme: ["PaperMod"]
