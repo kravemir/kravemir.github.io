@@ -61,8 +61,7 @@ imageGallery:
       caption: Box Contents
 ---
 
-::content-image{:alt="images.stickWithoutAntenna.alt" :image="images.stickWithoutAntenna.image"}
-::
+{{< content-image "stickWithoutAntenna" >}}
 
 ## Functionality
 
@@ -72,8 +71,7 @@ The external antenna can be rotated to make it radiate in desired direction. For
 
 It can be used as a coordinator, or as a router by flashing a different firmware.
 
-::content-image{:alt="images.sonoffAsCoordinator.alt" :image="images.sonoffAsCoordinator.image"}
-::
+{{< content-image "sonoffAsCoordinator" >}}
 
 It performs well in both roles - as a router, and as a coordinator.
 
@@ -99,15 +97,13 @@ The Zi-Stick wasn't properly maintaining links to devices, if there wasn't "enou
 
 The issue encountered with Zi-Stick didn't appear for Sonoff ZBDongle-E. On contrary, I even removed Moes USB Repeater, and devices linked to it automatically roamed to the ZBDongle-E router or to the ZBDongle-E coordinator.
 
-::image-gallery{:items="imageGallery.comparison"}
-::
+{{< image-gallery "comparison" >}}
 
 ## Aesthetics
 
 Quite big and bulky, which makes it to stand out if placed in plain sight. That's an expected cost to pay for a powerful Zigbee stick with an external antenna.
 
-::content-image{:alt="images.stickWithAntenna.alt" :image="images.stickWithAntenna.image"}
-::
+{{< content-image "stickWithAntenna" >}}
 
 However, Sonoff made it look quite nice even if it's big and bulky.
 
@@ -115,15 +111,13 @@ However, Sonoff made it look quite nice even if it's big and bulky.
 
 Disassembled device looks like this:
 
-::image-gallery{:items="imageGallery.internals"}
-::
+{{< image-gallery "internals" >}}
 
 ## Box and packaging
 
 Solid nice paper box with a manual, stick and antenna inside:
 
-::image-gallery{:items="imageGallery.boxAndPackaging"}
-::
+{{< image-gallery "boxAndPackaging" >}}
 
 ## Tips
 

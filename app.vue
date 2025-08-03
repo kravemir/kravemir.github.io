@@ -224,65 +224,6 @@ main article p  {
   overflow-wrap: break-word;
 }
 
-main article figure.page-image {
-  display: block;
-
-  margin: 0;
-  padding: 1.25rem 2rem;
-}
-
-main article figure.page-image .inner-container {
-  margin: auto;
-  width: 540px;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-main article figure.page-image .caption {
-  margin-top: 0.5rem;
-  font-size: 0.75rem;
-  text-align: center;
-}
-
-main article img {
-  max-width: 100%;
-  height: auto;
-
-  border-radius: 0.25rem;
-  overflow: hidden;
-}
-
-main article .gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  gap: 1rem;
-  padding: 0.5rem 1rem;
-
-  align-items: flex-start;
-}
-
-main article .gallery figure.page-image {
-  width: auto;
-  box-sizing: border-box;
-  height: auto;
-  padding: 0;
-}
-
-main article .gallery figure.page-image .inner-container {
-  width: auto;
-  height: auto;
-}
-
-@media (min-width: 640px) {
-  main article .gallery {
-    grid-template-columns: 1fr 1fr 1fr;
-
-    gap: 2rem;
-    padding: 1rem 2rem;
-  }
-}
-
 main article pre {
   background: #F6F6F6;
   border-radius: 0.25rem;

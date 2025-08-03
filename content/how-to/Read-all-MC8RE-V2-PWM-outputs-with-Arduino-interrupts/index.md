@@ -26,8 +26,7 @@ Ingredients needed:
 - MC8RE-V2 - receiver for remote,
 - jump wires - male to male, and male to female.
 
-::content-image{:alt="images.remote-with-receiver-and-arduino-due.alt" :image="images.remote-with-receiver-and-arduino-due.image"}
-::
+{{< content-image "remote-with-receiver-and-arduino-due" >}}
 
 Notes:
 

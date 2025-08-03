@@ -21,8 +21,7 @@ images:
 ---
 
 
-::content-image{:alt="images.closerLook.alt" :image="images.closerLook.image"}
-::
+{{< content-image "closerLook" >}}
 
 ## Prerequisites
 
@@ -32,8 +31,7 @@ Main parts:
 - WeAct 4.2" Epaper module,
 - other wiring ingredients of yours choice.
 
-::content-image{:alt="images.components.alt" :image="images.components.image"}
-::
+{{< content-image "components" >}}
 
 # Wiring
 
@@ -48,8 +46,7 @@ Connecting ESP32 development board and Epaper Module:
 - GND - GND
 - 3V3 - VCC
 
-::content-image{:alt="images.wiring.alt" :image="images.wiring.image"}
-::
+{{< content-image "wiring" >}}
 
 ## Full source code for ESP32
 

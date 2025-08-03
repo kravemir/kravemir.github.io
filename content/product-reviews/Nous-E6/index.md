@@ -46,8 +46,7 @@ imageGallery:
     - dischargeCurve02
 ---
 
-::content-image{:alt="images.frontPoweredOn.alt" :image="images.frontPoweredOn.image"}
-::
+{{< content-image "frontPoweredOn" >}}
 
 ## Precision
 
@@ -66,8 +65,7 @@ Notes:
 
 Device is powered by two AAA batteries.
 
-::content-image{:alt="images.openedBack.alt" :image="images.openedBack.image"}
-::
+{{< content-image "openedBack" >}}
 
 Rechargeable 1.2V NiMH batteries work fine. I love this fact, because I am not producing waste by early replacement of batteries, when I want to be sure, that sensor used in automations won't go dead in a bad moment.
 
@@ -80,22 +78,18 @@ Test runs:
 - **41 days** (over a month) on **550mAh** eneloop lite AAA batteries from fully charged to 1%,
 - **81 days** (over 2 months) on **550mAh** eneloop lite AAA batteries from fully charged to 1%.
 
-::image-gallery{:items="imageGallery.batteryLife"}
-::
-
+{{< image-gallery "batteryLife" >}}
 More results to be added.
 
 ## Package
 
 Box front and back:
 
-::content-image{:alt="images.packageFrontAndBack.alt" :image="images.packageFrontAndBack.image"}
-::
+{{< content-image "packageFrontAndBack" >}}
 
 Box contents:
 
-::content-image{:alt="images.boxContents.alt" :image="images.boxContents.image"}
-::
+{{< content-image "boxContents" >}}
 
 ## Alternative names and variants
 

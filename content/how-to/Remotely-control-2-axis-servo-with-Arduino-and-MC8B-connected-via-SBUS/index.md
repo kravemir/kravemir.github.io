@@ -37,8 +37,7 @@ imageGallery:
     - wiringMC8RESbusInvertor
 ---
 
-::content-image{:alt="images.components.alt" :image="images.components.image"}
-::
+{{< content-image "components" >}}
 
 ## Prerequisites
 
@@ -89,9 +88,7 @@ Connecting servo:
 - \- to GND - all connected together,
 - S to board's output pin (e.g. 25 and 26).
 
-::image-gallery{:items="imageGallery.wiring"}
-::
-
+{{< image-gallery "wiring" >}}
 ## Arduino Due - not supported by SBUS library
 
 Unfortunately, Arduino Due is the only Arduino board I've got currently available, and the SBUS library doesn't support this board:
