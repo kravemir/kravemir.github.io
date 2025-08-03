@@ -52,7 +52,7 @@ Connecting ESP32 development board and Epaper Module:
 
 Source code:
 
-```
+```arduino
 #define ENABLE_GxEPD2_GFX 0
 
 #include <GxEPD2_BW.h>
@@ -208,4 +208,4 @@ void loop() {
 
 Demonstration of functionality with ESP32:
 
-<iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/VWVlwO9dve0?si=wr1Obc1f5ba-5dP6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{{< youtube "VWVlwO9dve0?si=wr1Obc1f5ba-5dP6" >}}

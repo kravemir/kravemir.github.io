@@ -271,4 +271,4 @@ void loop() {};
 
 Demonstration of functionality with ESP32:
 
-<iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/uN31V_qtQIA?si=rwSIb0u8CZAUSl8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{{< youtube "uN31V_qtQIA?si=rwSIb0u8CZAUSl8A" >}}
