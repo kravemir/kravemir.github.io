@@ -21,8 +21,7 @@ images:
 ---
 
 
-::content-image{:alt="images.front.alt" :image="images.front.image"}
-::
+{{< content-image "front" >}}
 
 ## Prerequisites
 
@@ -32,8 +31,7 @@ Main parts:
 - 2.9" MH-ET Live 4-color Epaper Module,
 - other wiring ingredients of yours choice.
 
-::content-image{:alt="images.all.alt" :image="images.all.image"}
-::
+{{< content-image "all" >}}
 
 # Wiring
 
@@ -48,8 +46,7 @@ Connecting ESP32 development board and Epaper Module:
 - GND - GND
 - 3V3 - VCC
 
-::content-image{:alt="images.back.alt" :image="images.back.image"}
-::
+{{< content-image "back" >}}
 
 ## Programming the ESP32
 
@@ -61,7 +58,7 @@ Current version of library doesn't support the model, and custom configuration n
 
 Source code for the sketch:
 
-```
+```arduino
 #define ENABLE_GxEPD2_GFX 0
 
 #include <GxEPD2_4C.h>
@@ -274,4 +271,4 @@ void loop() {};
 
 Demonstration of functionality with ESP32:
 
-<iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/uN31V_qtQIA?si=rwSIb0u8CZAUSl8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{{< youtube "uN31V_qtQIA?si=rwSIb0u8CZAUSl8A" >}}

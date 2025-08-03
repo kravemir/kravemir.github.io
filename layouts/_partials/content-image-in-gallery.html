@@ -1,0 +1,40 @@
+{{ $imgArg := .image }}
+
+{{ $imgObject := cond (eq "string" (printf "%T" $imgArg)) (index .context.Page.Params.images $imgArg) $imgArg }}
+
+{{ $alt := $imgObject.alt }}
+{{ $img := .context.Page.Resources.GetMatch (printf "*%s*" $imgObject.image) }}
+
+{{ if $img }}
+    {{ $imgJpg := $img.Resize (printf "%dx%d jpeg" $img.Width $img.Height) }}
+
+    {{ $sizes := "(min-width: 640px) 200px, calc(50vw - 1rem)"}}
+
+    <a href="{{ $img.RelPermalink }}" target="_blank">
+        <figure class="page-image">
+            <div class="inner-container">
+                <picture style="display: inherit">
+                    <source type="image/webp"
+                            sizes="{{ $sizes }}"
+                            srcset="{{ with $img.Resize "150x webp CatmullRom" }}{{.RelPermalink}} {{.Width}}w{{end}},
+                    {{ with $img.Resize "200x webp CatmullRom" }}{{.RelPermalink}} {{.Width}}w{{end}},
+                    {{ with $img.Resize "300x webp CatmullRom" }}{{.RelPermalink}} {{.Width}}w{{end}},
+                    {{ with $img.Resize "400x webp CatmullRom" }}{{.RelPermalink}} {{.Width}}w{{end}}"
+                    />
+                    <img style="height: auto; width: auto"
+                         srcset="{{ with $img.Resize "200x CatmullRom" }}{{.RelPermalink}} {{.Width}}w{{end}},
+                    {{ with $img}}{{ .RelPermalink }} {{.Width}}w{{end}}"
+                    sizes="{{ $sizes }}"
+                    alt="{{ $alt }}"
+                    title="{{ $alt }}"
+                    src="{{ $imgJpg.RelPermalink }}"
+                    width="{{ $img.Width }}"
+                    height="{{ $img.Height }}"/>
+                </picture>
+                <div class="caption">{{ default $imgObject.alt $imgObject.caption }}</div>
+            </div>
+        </figure>
+    </a>
+{{ else }}
+    {{ errorf "Missing image '%s'" $imgArg }}
+{{ end }}

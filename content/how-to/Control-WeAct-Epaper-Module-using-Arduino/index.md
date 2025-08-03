@@ -21,8 +21,7 @@ images:
 ---
 
 
-::content-image{:alt="images.closerLook.alt" :image="images.closerLook.image"}
-::
+{{< content-image "closerLook" >}}
 
 ## Prerequisites
 
@@ -32,8 +31,7 @@ Main parts:
 - WeAct 4.2" Epaper module,
 - other wiring ingredients of yours choice.
 
-::content-image{:alt="images.components.alt" :image="images.components.image"}
-::
+{{< content-image "components" >}}
 
 # Wiring
 
@@ -48,14 +46,13 @@ Connecting ESP32 development board and Epaper Module:
 - GND - GND
 - 3V3 - VCC
 
-::content-image{:alt="images.wiring.alt" :image="images.wiring.image"}
-::
+{{< content-image "wiring" >}}
 
 ## Full source code for ESP32
 
 Source code:
 
-```
+```arduino
 #define ENABLE_GxEPD2_GFX 0
 
 #include <GxEPD2_BW.h>
@@ -211,4 +208,4 @@ void loop() {
 
 Demonstration of functionality with ESP32:
 
-<iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/VWVlwO9dve0?si=wr1Obc1f5ba-5dP6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{{< youtube "VWVlwO9dve0?si=wr1Obc1f5ba-5dP6" >}}

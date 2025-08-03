@@ -37,8 +37,7 @@ imageGallery:
     - wiringMC8RESbusInvertor
 ---
 
-::content-image{:alt="images.components.alt" :image="images.components.image"}
-::
+{{< content-image "components" >}}
 
 ## Prerequisites
 
@@ -89,9 +88,7 @@ Connecting servo:
 - \- to GND - all connected together,
 - S to board's output pin (e.g. 25 and 26).
 
-::image-gallery{:items="imageGallery.wiring"}
-::
-
+{{< image-gallery "wiring" >}}
 ## Arduino Due - not supported by SBUS library
 
 Unfortunately, Arduino Due is the only Arduino board I've got currently available, and the SBUS library doesn't support this board:
@@ -112,7 +109,7 @@ Arduino's standard library doesn't support servo control for ESP32.
 
 Lots of libraries didn't build, but luckily I found one from multiple libraries I tried, and this one worked https://github.com/madhephaestus/ESP32ServoServer.
 
-```
+```arduino
 #include "SBUS.h"
 #include <ESP32Servo.h>
 
@@ -242,4 +239,4 @@ void loop() {
 
 Demonstration of functionality with ESP32:
 
-<iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/k7NmP6bx-qw?si=6VbMvPhLsVKNwV1u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{{< youtube "k7NmP6bx-qw?si=6VbMvPhLsVKNwV1u" >}}

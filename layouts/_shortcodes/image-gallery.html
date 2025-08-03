@@ -1,0 +1,9 @@
+{{ $galleryArg := .Get 0 }}
+{{ $gallery := index .Page.Params.imageGallery $galleryArg }}
+
+<div class="gallery">
+    {{- $original := . -}}
+    {{ range $image := $gallery }}
+        {{- partial "content-image-in-gallery.html" (dict "context" $original "image" $image) -}}
+    {{ end }}
+</div>

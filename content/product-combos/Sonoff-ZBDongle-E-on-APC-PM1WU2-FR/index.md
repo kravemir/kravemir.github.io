@@ -32,9 +32,8 @@ Products:
 
 Photos of the combination:
 
-:image-gallery{:items="imageGallery.photos"}
+{{< image-gallery "photos" >}}
 
 One of ideal placements is behind a TV to protect TV from surges, and power and hide Sonoff ZBDongle-E as a router:
 
-::content-image{:alt="images.hiddenBehindTV.alt" :image="images.hiddenBehindTV.image"}
-::
+{{< content-image "hiddenBehindTV" >}}

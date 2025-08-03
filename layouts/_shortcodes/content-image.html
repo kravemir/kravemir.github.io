@@ -1,0 +1,35 @@
+{{ $imgArg := .Get 0 }}
+{{ $imgObject := index .Page.Params.images $imgArg }}
+
+{{ $alt := $imgObject.alt }}
+{{ $img := .Page.Resources.GetMatch (printf "*%s*" $imgObject.image) }}
+
+{{ $imgJpg := $img.Resize (printf "%dx%d jpeg" $img.Width $img.Height) }}
+
+{{ $sizes := "(max-width: 600px) 360px, 600px"}}
+
+<a href="{{ $img.RelPermalink }}" target="_blank">
+    <figure class="page-image">
+        <div class="inner-container">
+            <picture style="display: inherit">
+                <source type="image/webp"
+                        sizes="{{ $sizes }}"
+                        srcset="{{ with $img.Resize "360x webp CatmullRom" }}{{.RelPermalink}} {{.Width}}w{{end}},
+                                {{ with $img.Resize "540x webp CatmullRom" }}{{.RelPermalink}} {{.Width}}w{{end}},
+                                {{ with $img.Resize "810x webp CatmullRom" }}{{.RelPermalink}} {{.Width}}w{{end}},
+                                {{ with $img.Resize "1080x webp CatmullRom" }}{{.RelPermalink}} {{.Width}}w{{end}}"
+                />
+                <img style="height: auto; width: auto"
+                     srcset="{{ with $img.Resize "540x CatmullRom" }}{{.RelPermalink}} {{.Width}}w{{end}},
+                {{ with $img}}{{ .RelPermalink }} {{.Width}}w{{end}}"
+                sizes="{{ $sizes }}"
+                alt="{{ $alt }}"
+                title="{{ $alt }}"
+                src="{{ $imgJpg.RelPermalink }}"
+                width="{{ $img.Width }}"
+                height="{{ $img.Height }}"/>
+            </picture>
+            <div class="caption">{{ default $imgObject.alt $imgObject.caption }}</div>
+        </div>
+    </figure>
+</a>

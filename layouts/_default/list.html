@@ -1,0 +1,28 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+</header>
+
+{{- if .Content }}
+<div class="post-content">{{ .Content }}</div>
+{{- end }}
+
+{{- $pages := union .RegularPages .Sections }}
+
+<ul class="generic-link-list product-review-list">
+{{- range $pages }}
+    <li>
+        {{ partial "list-item-cover-image-thumbnail.html" . }}
+        <a href="{{ .Permalink }}">
+            {{ .Title }}
+            {{ with .Params.subtitle }}<span class="subtitle">{{.}}</span>{{ end }}
+        </a>
+        {{ $intro := .Params.intro }}
+        {{ if .Params.Description }}{{ $intro = .Params.Description }}{{ end }}
+        {{ with $intro }}<div class="intro">{{ . }}</div>{{ end }}
+    </li>
+{{- end }}
+</ul>
+
+{{- end }}

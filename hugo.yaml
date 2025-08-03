@@ -1,0 +1,57 @@
+baseURL: https://kravemir.org/
+languageCode: en-us
+title: kravemir.org
+
+theme: ["PaperMod"]
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+menu:
+  main:
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 10
+    - identifier: how-to
+      name: How To
+      url: /how-to/
+      weight: 20
+    - identifier: product-reviews
+      name: Product Reviews
+      url: /product-reviews/
+      weight: 30
+
+
+params:
+  defaultTheme: auto
+  ShowShareButtons: true
+  displayFullLangName: true
+  ShowCodeCopyButtons: true
+
+  profileMode:
+    enabled: true
+    title: "Miroslav Kravec"
+    subtitle: Welcome to my site.
+    buttons:
+      - name: How To (guides)
+        url: "/how-to"
+      - name: Product Reviews
+        url: "/product-reviews"
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/kravemir"
+    - name: flickr
+      url: "https://www.flickr.com/people/kravemir/"
+    - name: pixabay
+      url: "https://pixabay.com/users/kravemir-27471643/"
+    - name: youtube
+      url: "https://www.youtube.com/@kravemir"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/kravemir/"
+    - name: mastodon
+      url: "https://fosstodon.org/@kravemir"
