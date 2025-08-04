@@ -16,6 +16,10 @@ menu:
       name: Search
       url: /search/
       weight: 10
+    - identifier: knowledgebase
+      name: Knowledgebase
+      url: /kb/
+      weight: 15
     - identifier: how-to
       name: How To
       url: /how-to/

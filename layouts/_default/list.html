@@ -18,7 +18,8 @@
             {{ .Title }}
             {{ with .Params.subtitle }}<span class="subtitle">{{.}}</span>{{ end }}
         </a>
-        {{ $intro := .Params.intro }}
+        {{ $intro := .Summary }}
+        {{ if .Params.intro }}{{ $intro = .Params.intro }}{{ end }}
         {{ if .Params.Description }}{{ $intro = .Params.Description }}{{ end }}
         {{ with $intro }}<div class="intro">{{ . }}</div>{{ end }}
     </li>
