@@ -40,6 +40,10 @@ footer.footer > *,
     padding: var(--gap);
 }
 
+.main .profile {
+    min-height: 50vh;
+}
+
 /* ------------------- */
 
 html {

@@ -42,3 +42,8 @@ Glossary, related terminology and concepts:
 - ReBAC - relationship-based access control.
 - Reverse Indexing - query resources user has access to.
 
+Other: 
+
+- https://goauthentik.io/
+- https://www.reddit.com/r/selfhosted/comments/191879o/authentik_and_authelia_does_it_matter/?rdt=56913
+- https://www.permit.io/blog/mac-dac-rbac-and-fga-and-access-control
