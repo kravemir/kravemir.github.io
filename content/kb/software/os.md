@@ -4,16 +4,26 @@ title: Operating Systems
 
 <!--more-->
 
-Security by Compartmentalization:
+## Security by Compartmentalization
+
+Operating systems:
 
 - [Chrome OS](https://chromeos.google/):
-  - Crostini ([docs](https://www.chromium.org/chromium-os/developer-library/guides/containers/containers-and-vms/))
-- https://www.qubes-os.org/
-- https://spectrum-os.org/
-- https://roscidus.com/blog/blog/2021/03/07/qubes-lite-with-kvm-and-wayland/
-  - https://gitlab.com/talex5/qubes-lite
+  - Crostini [[docs](https://www.chromium.org/chromium-os/developer-library/guides/containers/containers-and-vms/)]
+- [Qubes OS](https://www.qubes-os.org/)
+- [Spectrum](https://spectrum-os.org/) [unfinished, experimental]
 
-Casual:
+Experiments:
+
+- [Qubes-lite with KVM and Wayland](https://roscidus.com/blog/blog/2021/03/07/qubes-lite-with-kvm-and-wayland/) [[github](https://gitlab.com/talex5/qubes-lite)]
+
+Tools:
+
+- [libkrun](https://github.com/containers/libkrun) - A dynamic library providing Virtualization-based process isolation capabilities
+  - [muvm](https://github.com/AsahiLinux/muvm) - run programs from your system in a microVM
+- [MicroVM.nix](https://github.com/microvm-nix/microvm.nix) - NixOS MicroVMs
+
+## Casual
 
 - https://getaurora.dev/
 - https://universal-blue.org/
@@ -22,20 +32,20 @@ Casual:
 - https://projectbluefin.io/
 - https://www.reddit.com/r/Fedora/comments/1ecxg0z/how_many_of_you_have_faith_in/
 
-Network:
+## Network devices (firmware)
 
 - https://www.liminix.org/
 - https://vyos.io/vyos-universal-router
 
-NAS / self-hosting OS:
+## NAS / self-hosting OS:
 
-- https://sandstorm.io/
-- https://doc.yunohost.org/
-- https://www.truenas.com/
-- https://www.openmediavault.org/
-- https://rockstor.com/
+- [Sandstorm](https://sandstorm.io/)
+- [YunoHost](https://doc.yunohost.org/)
+- [TrueNAS](https://www.truenas.com/)
+- [openmediavault](https://www.openmediavault.org/)
+- [Rockstor](https://rockstor.com/)
 
-Android-like:
+## Android-like
 
-- https://www.fydeos.io/
-- https://blissos.org/
+- [fydeOS](https://www.fydeos.io/)
+- [BlissOS](https://blissos.org/) [[github](https://github.com/BlissRoms-x86), [blisslabs](https://blisslabs.org/), [blisscolabs](https://blisscolabs.dev/)]

@@ -10,6 +10,8 @@ outputs:
     - RSS
     - JSON
 
+enableRobotsTXT: true
+
 menu:
   main:
     - identifier: search

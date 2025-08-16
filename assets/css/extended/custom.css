@@ -44,6 +44,15 @@ footer.footer > *,
     min-height: 50vh;
 }
 
+p {
+    margin-top: 1.375rem;
+}
+
+
+.post-content ol, .post-content ul {
+    padding-inline-start: 2rem;
+}
+
 /* ------------------- */
 
 html {
@@ -396,6 +405,9 @@ ul.generic-link-list {
     font-size: 0.875rem;
 }
 
+.generic-link-list li .intro p {
+    margin: 0;
+}
 
 .main article header.post-header {
     background: #F8FBF2;

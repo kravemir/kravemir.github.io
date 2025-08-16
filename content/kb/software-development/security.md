@@ -10,6 +10,7 @@ Security in software development.
 
 Solutions and engines:
 
+- [Authelia](https://www.authelia.com/) [[github](https://github.com/authelia/authelia)] - open-source authentication and authorization server and portal fulfilling the identity and access management (IAM)...
 - [Cerbos](https://cerbos.dev/) - open source, decoupled access control for your software:
     - [Filtering data using authorization logic](https://cerbos.dev/blog/filtering-data-using-authorization-logic),
     - [Cerbos’s Secret Ingredients: Protobufs and gRPC](https://thenewstack.io/cerboss-secret-ingredients-protobufs-and-grpc/).

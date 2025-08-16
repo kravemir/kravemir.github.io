@@ -21,11 +21,51 @@ Browser:
 
 - https://privacytests.org/
 
+## IoT & home automation
+
+Networking, protocols:
+
+- [Bluetooth Mesh](https://en.wikipedia.org/wiki/Bluetooth_mesh_networking)
+- [Meshtastic](https://meshtastic.org/)
+- [Reticulum](https://reticulum.network/)
+- Z-Wave
+- Zigbee
+- Matter
+- LoRa/LoRaWan
+- [DASH7](https://en.m.wikipedia.org/wiki/DASH7)
+- [VCSP](https://en.wikipedia.org/wiki/Very_Simple_Control_Protocol)
+- https://wesh.network/
+
+Software:
+
+- [Riot OS](https://www.riot-os.org/)
+  - IEEE 802.15.4. On the application level you can use e.g. CoAP or MQTT-SN via our 6LoWPAN
+
+## Backups
+
+Strategy:
+
+- https://www.backblaze.com/blog/whats-the-diff-3-2-1-vs-3-2-1-1-0-vs-4-3-2/
+- https://community.veeam.com/blogs-and-podcasts-57/3-2-1-1-0-golden-backup-rule-569
+
+Borg:
+
+- https://artemis.sh/2022/06/22/how-i-use-borg.html
+
 ## Other
+
+Network:
+
+- [SmokePing](https://oss.oetiker.ch/smokeping/) [[github](https://github.com/oetiker/SmokePing)]
 
 Software:
 
 - [notesnook](https://notesnook.com/) [[github]](https://github.com/streetwriters/notesnook) - zero knowledge private note taking,
+- https://github.com/pawelmalak/snippet-box
+- https://github.com/Dolibarr/dolibarr
+- https://landing.openziti.io/
+- [MinIO](https://www.min.io/)
+- [Garage](https://garagehq.deuxfleurs.fr/)
 
 Microphones:
 

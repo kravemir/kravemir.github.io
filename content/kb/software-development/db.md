@@ -35,3 +35,4 @@ Technologies:
 
 - https://www.paradedb.com/
 - https://skytable.io/
+- [artie](https://www.artie.com/)
