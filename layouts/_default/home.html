@@ -1,3 +1,24 @@
 {{- define "main" }}
 {{- partial "index_profile.html" . }}
+
+{{ $pages := .Site.RegularPages.ByDate.Reverse }}
+{{ $pages = where $pages "Params.Date" "ne" nil }}
+
+<ul class="generic-link-list product-review-list">
+  {{- range $pages   }}
+  <li>
+    {{ partial "list-item-cover-image-thumbnail.html" . }}
+    <a href="{{ .Permalink }}">
+      {{ .Title }}
+      {{ with .Params.subtitle }}<span class="subtitle">{{.}}</span>{{ end }}
+    </a>
+    {{ $intro := .Summary }}
+    {{ if .Params.intro }}{{ $intro = .Params.intro }}{{ end }}
+    {{ if .Params.Description }}{{ $intro = .Params.Description }}{{ end }}
+    {{ with $intro }}<div class="intro">{{ . }}</div>{{ end }}
+    {{- partial "custom_meta.html" . -}}
+  </li>
+  {{- end }}
+</ul>
+
 {{- end }}
