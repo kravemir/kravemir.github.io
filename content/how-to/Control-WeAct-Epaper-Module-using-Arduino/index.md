@@ -1,8 +1,14 @@
 ---
 title: Control WeAct Epaper Module using Arduino
 
+date: 2025-02-19T19:13:21+01:00
+
 description: Guide how to draw on WeAct Epaper module using Arduino.
 
+keywords:
+  - arduino
+  - epaper
+  
 coverImage: closerLook
 
 images:

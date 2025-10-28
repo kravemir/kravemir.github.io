@@ -2,6 +2,17 @@
 title: Run graphical application in a container
 subtitle: With docker and podman, sommelier, Wayland and XWayland
 
+keywords:
+  - Wayland
+  - Containers
+  - Docker
+  - Podman
+  - Sommelier
+
+date: 2025-10-19T12:13:28+02:00
+
+description: Guide with examples describing how to run Wayland a X applications in containers, using docker and podman.
+
 intro: Creation of isolated environment in declarative way to run graphical application.
 ---
 

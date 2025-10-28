@@ -22,6 +22,7 @@
         {{ if .Params.intro }}{{ $intro = .Params.intro }}{{ end }}
         {{ if .Params.Description }}{{ $intro = .Params.Description }}{{ end }}
         {{ with $intro }}<div class="intro">{{ . }}</div>{{ end }}
+        {{- partial "custom_meta.html" . -}}
     </li>
 {{- end }}
 </ul>

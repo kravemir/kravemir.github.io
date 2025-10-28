@@ -2,6 +2,10 @@
 title: Sonoff ZBDongle-E
 subtitle: Zigbee 3.0 USB Dongle Plus
 
+date: 2024-01-21T10:26:27+01:00
+
+description: Review of Sonoff ZBDongle-E as a coordinator and as a router.
+
 intro: Quite powerful Zigbee USB stick with an external antenna. By default a coordinator. Can be flashed as a router.
 
 notes:

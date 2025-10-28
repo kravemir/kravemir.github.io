@@ -8,6 +8,8 @@
       {{ with .Params.subtitle }}<span class="subtitle">{{.}}</span>{{ end }}
     </h1>
     {{ with .Params.description }}<div class="description">{{ .  | markdownify }}</div> {{ end }}
+
+    {{- partial "custom_meta.html" . -}}
   </header>
 
   {{- if .Content }}

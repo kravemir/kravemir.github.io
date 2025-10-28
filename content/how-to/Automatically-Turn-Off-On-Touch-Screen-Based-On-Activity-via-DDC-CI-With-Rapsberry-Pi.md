@@ -2,6 +2,8 @@
 title: Automatically turn ON and OFF a touch monitor
 subtitle: Via DDC/CI protocol, based on activity in X11 using XSS lib, on Raspberry Pi 5
 
+date: 2024-04-07T13:08:05+02:00
+
 description: Guide on how to setup automatic on and off of a touch screen for power saving, without a blue screen on a loss of HDMI signal.
 
 intro: |

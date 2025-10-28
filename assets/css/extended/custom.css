@@ -380,7 +380,7 @@ ul.generic-link-list {
 }
 
 .generic-link-list li > *:last-child {
-    margin-bottom: 1rem;
+    margin-bottom: 0.875rem;
 }
 
 @media (min-width: 640px) {
@@ -407,6 +407,13 @@ ul.generic-link-list {
 
 .generic-link-list li .intro p {
     margin: 0;
+}
+
+.generic-link-list li .meta {
+    margin-top: 0.425rem;
+
+    font-size: 0.7rem;
+    color: rgba(0,0,0,0.9);
 }
 
 .main article header.post-header {
@@ -443,4 +450,12 @@ article header.post-header h1 {
 
 article header .description {
     margin-top:  1rem;
+}
+
+article header.post-header .meta {
+    margin-top: 1.2rem;
+    margin-bottom: -0.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: rgba(0,0,0,0.44);
 }

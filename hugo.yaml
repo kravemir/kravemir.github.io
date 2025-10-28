@@ -38,6 +38,11 @@ params:
   displayFullLangName: true
   ShowCodeCopyButtons: true
 
+  author: Miroslav Kravec
+
+  social:
+    fediverse_creator: '@kravemir@fosstodon.org'
+
   profileMode:
     enabled: true
     title: "Miroslav Kravec"

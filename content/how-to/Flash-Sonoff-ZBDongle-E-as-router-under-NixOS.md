@@ -1,6 +1,10 @@
 ---
 title: Flash Sonoff ZBDongle-E as router under NixOS
 
+date: 2024-01-21T10:26:27+01:00
+
+description: Guide on how to flash Sonoff ZBDongle-E as router under NixOS
+
 intro: Sonoff ZBDongle-E is quite powerful Zigbee dongle. By default, it's loaded with coordinator firmware. This how to article contains steps cheatsheet to flash it with router firmware under NixOS.
 ---
 

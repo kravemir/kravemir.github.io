@@ -2,6 +2,8 @@
 title: Read MC8RE-V2 PWM with Arduino 
 subtitle: All signal outputs, in background, without blocking, using interrupts
 
+date: 2025-01-25T16:20:37+01:00
+
 description: Guide how to read all 7 PWM channels of MC8RE-V2 with Arduino without using blocking calls the main loop.
 
 intro: |

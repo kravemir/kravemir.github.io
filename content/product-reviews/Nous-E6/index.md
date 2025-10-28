@@ -2,6 +2,10 @@
 title: Nous E6
 subtitle: Smart ZigBee LCD Temperature and Humidity Sensor
 
+date: 2024-01-14T15:37:20+01:00
+
+description: Review of Nous E6 Smart ZigBee LCD Temperature and Humidity Sensor.
+
 intro: |
   Cool little Zigbee temperature and humidity sensor with display, working on rechargeable 2xAAA batteries.
 

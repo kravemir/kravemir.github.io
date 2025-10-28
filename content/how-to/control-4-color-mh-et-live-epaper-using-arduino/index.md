@@ -1,7 +1,15 @@
 ---
 title: Control 4-color MH-ET Live Epaper using Arduino
 
+date: 2025-02-23T19:52:48+01:00
+
 description: Guide how to draw on 4-color Epaper Module from MH-ET LIVE using Arduino (and ESP32).
+
+keywords:
+  - arduino
+  - epaper
+  - multi-color
+  - 4-color
 
 coverImage: front
 

@@ -2,6 +2,8 @@
 title: Remotely control 2 axis servo with Arduino and MC8B 
 subtitle: Using SBUS communication between the board and MC8RE-V2 receiver
 
+date: 2025-02-01T13:41:32+01:00
+
 description: Receive data from SBUS, transform to corresponding servo control values, and with smoothing of values to prevent jitter.
 
 intro: |
