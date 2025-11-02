@@ -1,4 +1,5 @@
-<pre class="mermaid">
-  {{ .Inner | htmlEscape | safeHTML }}
-</pre>
-{{ .Page.Store.Set "hasMermaid" true }}
+<figure class="page-image">
+  <div class="inner-container">
+    <img src="mermaid-out-{{ add .Ordinal 1 }}.svg"/>
+  </div>
+</figure>
