@@ -7,7 +7,7 @@ set -euo pipefail
 while IFS= read -r -d '' file
 do
   DIR=$(dirname "$file")
-  mmdc $MMDC_EXTRA_OPTIONS -i "${DIR}"/index.md -o "${DIR}"/mermaid-out.svg
+  mmdc ${MMDC_EXTRA_OPTIONS:-} -i "${DIR}"/index.md -o "${DIR}"/mermaid-out.svg
 
   # Fix numbering of output files considering all code blocks found in the .md file
   readarray -t number_map < <(grep -E '^```([a-zA-Z0-9]+)' "${DIR}"/index.md | nl -w1 | grep mermaid | awk '{print $1}' | nl -w1 -s:)
