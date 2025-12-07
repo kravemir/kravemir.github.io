@@ -8,7 +8,7 @@
 <div class="post-content">{{ .Content }}</div>
 {{- end }}
 
-{{- $pages := union .RegularPages.ByDate.Reverse .Sections }}
+{{- $pages := .Pages }}
 
 <ul class="generic-link-list product-review-list">
 {{- range $pages }}

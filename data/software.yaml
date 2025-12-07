@@ -1,0 +1,84 @@
+- type: operating-system
+  url: https://www.talos.dev/
+  name: Talos Linux
+  use-cases:
+    - "Container Host"
+  description: Talos Linux is designed from the ground up as a secure, immutable, and minimal operating system for Kubernetes. It removes configuration drift by treating infrastructure as code.
+- type: operating-system
+  url: https://bottlerocket.dev/
+  name: Bottlerocket
+  use-cases:
+    - "Container Host"
+  description: 'Bottlerocket has three primary goals: Minimal, Safe Updates and Security Focused.'
+- type: operating-system
+  url: https://kairos.io/
+  name: Kairos
+  use-cases:
+    - "Container Host"
+  description: Transform your Linux system and preferred Kubernetes distribution into a secure bootable image for your edge devices.
+- type: operating-system
+  url: https://www.flatcar.org/
+  name: Flatcar
+  use-cases:
+    - "Container Host"
+  description: Minimal & Focused. Only the essential tools to run your container. No package manager, no configuration drift. Fortress-Level Security. An immutable, read-only filesystem. Effortless, Automated Updates. Atomic, hands-free updates.
+- type: operating-system
+  url: https://fedoraproject.org/coreos/
+  name: Fedora CoreOS
+  use-cases:
+    - "Container Host"
+  description: A minimal OS with automatic updates. Scalable and secure.
+- type: software-stack
+  url: https://elemental.docs.rancher.com/
+  name: Elemental
+  description: Elemental is a software stack enabling centralized, full cloud-native OS management with Kubernetes.
+- type: operating-system
+  url: https://linuxcontainers.org/incus-os/introduction/
+  name: IncusOS
+  description: IncusOS is an immutable OS solely designed around safely and reliably running Incus. It uses modern security features like UEFI Secure Boot and TPM to provide a safe boot experience and seamless full disk encryption.
+- type: unknown
+  url: https://linuxcontainers.org/incus/
+  name: Incus
+  description: Incus is a next-generation system container, application container, and virtual machine manager.
+- type: operating-system
+  url: https://fedoraproject.org/atomic-desktops/silverblue/
+  name: Fedora Silverblue
+  use-cases:
+    - "Desktop"
+  description: Reliable, atomic, safe (rollback), containerized (Flatpak), developer friendly, private, trusted, open-source.
+- type: operating-system
+  url: https://secureblue.dev/
+  name: SecureBlue
+  use-cases:
+    - "Desktop"
+    - "Server"
+  description: Security-focused desktop and server Linux operating system. Shipped as a set of OCI bootable container images generated with BlueBuild, using Fedora Atomic Desktop’s base images as a starting point.
+- type: operating-system
+  url: https://sandstorm.io/
+  name: Sandstorm
+  use-cases:
+    - "NAS"
+  description: Open source platform for self-hosting web apps.
+- type: operating-system
+  url: https://yunohost.org/
+  name: YunoHost
+  use-cases:
+    - "NAS"
+  description: With YunoHost, easily manage self-hosted apps for your friends, your association, your company.
+- type: operating-system
+  url: https://www.truenas.com/
+  name: TrueNAS
+  use-cases:
+    - "NAS"
+  description: The Enterprise Data Platform
+- type: operating-system
+  url: https://www.openmediavault.org/
+  name: openmediavault
+  use-cases:
+    - "NAS"
+- type: operating-system
+  url: https://rockstor.com/
+  name: Rockstor
+  use-cases:
+    - "NAS"
+

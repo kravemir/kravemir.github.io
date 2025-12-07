@@ -1,0 +1,16 @@
+{{ $collectionName := .Get "collection" }}
+{{ $typeName := .Get "type" }}
+{{ $useCaseName := .Get "useCase" }}
+
+{{ $things := (index .Site.Data $collectionName) }}
+{{ if $typeName }}{{ $things = where $things "type" $typeName }}{{ end }}
+{{ if $useCaseName }}{{ $things = where $things "use-cases" "intersect" (slice $useCaseName) }}{{ end }}
+
+{{ $things = sort $things "url" }}
+{{ $things = sort $things "name" }}
+
+{{ range $item := $things }}
+<ul>
+  <li><a href="{{ .url }}">{{ default .url .name }}</a>{{ with .description }} - {{.}}{{end}}</li>
+</ul>
+{{end}}

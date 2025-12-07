@@ -1,0 +1,7 @@
+- url: https://www.reddit.com/r/selfhosted/comments/1akuoql/security_concerns_about_containers/
+- url: https://www.reddit.com/r/devops/comments/fe4y75/proscons_containers_vs_immutable_virtual_machine/
+- url: https://blog.gripdev.xyz/2024/03/16/in-search-of-a-zero-toil-homelab-with-immutable-linux/
+- url: https://www.opensourcerers.org/2023/06/16/using-ostree-native-containers-as-node-base-images/
+- url: https://dev.to/vaiolabs_io/automating-custom-iso-with-cloud-init-2lc2
+- url: https://arianfm.medium.com/create-virtual-machine-with-cloud-image-and-cloud-init-config-using-qemu-kvm-8080ee6e7f05
+- url: https://cpaelzer.github.io/blogs/009-microvm-in-ubuntu/

@@ -4,6 +4,10 @@ title: Operating Systems
 
 <!--more-->
 
+## Desktop
+
+{{< thing-list collection=software type=operating-system useCase="Desktop" >}}
+
 ## Security by Compartmentalization
 
 Operating systems:
@@ -39,13 +43,17 @@ Tools:
 
 ## NAS / self-hosting OS:
 
-- [Sandstorm](https://sandstorm.io/)
-- [YunoHost](https://doc.yunohost.org/)
-- [TrueNAS](https://www.truenas.com/)
-- [openmediavault](https://www.openmediavault.org/)
-- [Rockstor](https://rockstor.com/)
+{{< thing-list collection=software type=operating-system useCase="NAS" >}}
 
 ## Android-like
 
 - [fydeOS](https://www.fydeos.io/)
 - [BlissOS](https://blissos.org/) [[github](https://github.com/BlissRoms-x86), [blisslabs](https://blisslabs.org/), [blisscolabs](https://blisscolabs.dev/)]
+
+## Container host
+
+{{< thing-list collection=software type=operating-system useCase="Container Host" >}}
+
+## Server
+
+{{< thing-list collection=software type=operating-system useCase="Server" >}}
