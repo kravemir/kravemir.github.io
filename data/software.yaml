@@ -81,4 +81,37 @@
   name: Rockstor
   use-cases:
     - "NAS"
-
+- url: https://lima-vm.io/docs/
+  name: Lima VM
+  description: Lima launches Linux virtual machines with automatic file sharing and port forwarding (similar to WSL2).
+  use-cases:
+    - "VM Management"
+- url: https://developer.hashicorp.com/vagrant
+  name: Vagrant
+  description: Vagrant is the command line utility for managing the lifecycle of virtual machines. Isolate dependencies and their configuration within a single disposable and consistent environment.
+  use-cases:
+    - "VM Management"
+- url: https://github.com/containers/crun-vm
+  name: crun-vm
+  description: OCI Runtime that enables Podman, Docker, and Kubernetes to run QEMU-compatible Virtual Machine (VM) images. Run VMs as easily as you run containers. Manage containers and VMs together using the same standard tooling.
+  use-cases:
+    - "VM Management"
+- url: https://osbuild.org/
+  name: OSBuild
+  description: Image Builder - Building operating system artifacts.
+  use-cases:
+    - "OS Images"
+- url: https://github.com/systemd/mkosi
+- url: https://katacontainers.io/
+- url: https://canonical.com/multipass
+- url: https://github.com/linka-cloud/d2vm
+  name: d2vm
+  description: Build Virtual Machine Image from Dockerfile or Docker image
+  use-cases:
+    - "OS Images"
+- url: https://developer.hashicorp.com/packer
+  name: Packer
+  description: tool that lets you create identical machine images for multiple platforms from a single source template. Packer can create golden images to use in image pipelines.
+  use-cases:
+    - "OS Images"
+- url: https://firecracker-microvm.github.io/

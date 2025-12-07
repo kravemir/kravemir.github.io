@@ -5,3 +5,7 @@
 - url: https://dev.to/vaiolabs_io/automating-custom-iso-with-cloud-init-2lc2
 - url: https://arianfm.medium.com/create-virtual-machine-with-cloud-image-and-cloud-init-config-using-qemu-kvm-8080ee6e7f05
 - url: https://cpaelzer.github.io/blogs/009-microvm-in-ubuntu/
+- url: https://www.khuedoan.com/posts/alternatives-to-hashicorp-products
+- url: https://www.reddit.com/r/devops/comments/1ckopgu/is_there_an_opensource_fork_for_hashicorp_packer/
+- url: https://kubevirt.io/2025/Building-VM-golden-image-with-Packer.html
+- url: https://containers.github.io/bootable/
