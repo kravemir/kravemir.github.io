@@ -115,3 +115,23 @@
   use-cases:
     - "OS Images"
 - url: https://firecracker-microvm.github.io/
+- url: https://pykickstart.readthedocs.io/
+  name: Kickstart
+  description: installation method used by Fedora, Red Hat Enterprise Linux and related distributions to automatically perform unattended OS installation and configuration.
+  use-cases:
+    - "Unattended OS installation"
+- url: https://cloudinit.readthedocs.io/
+  name: cloud-init
+  description: industry standard multi-distribution method for cross-platform cloud instance initialization. It is supported across all major public cloud providers, provisioning systems for private cloud infrastructure, and bare-metal installations.
+  use-cases:
+    - "Unattended OS installation"
+- url: https://netlab.tools/
+  name: netlab
+  description: bringing infrastructure-as-code concepts to networking labs. You'll describe your high-level network topology and routing design in a YAML file, and the tools in this repository will ...
+  use-cases:
+    - "Virtual Networks"
+- url: https://containerlab.dev/
+  name: containerlab
+  description: CLI for orchestrating and managing container-based networking labs. It starts the containers, builds a virtual wiring between them to create lab topologies of users choice and manages labs lifecycle.
+  use-cases:
+    - "Virtual Networks"
