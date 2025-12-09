@@ -1,10 +1,12 @@
 {{ $collectionName := .Get "collection" }}
 {{ $typeName := .Get "type" }}
 {{ $useCaseName := .Get "useCase" }}
+{{ $tagName := .Get "tag" }}
 
 {{ $things := (index .Site.Data $collectionName) }}
 {{ if $typeName }}{{ $things = where $things "type" $typeName }}{{ end }}
 {{ if $useCaseName }}{{ $things = where $things "use-cases" "intersect" (slice $useCaseName) }}{{ end }}
+{{ if $tagName }}{{ $things = where $things "tags" "intersect" (slice $tagName) }}{{ end }}
 
 {{ $things = sort $things "url" }}
 {{ $things = sort $things "name" }}

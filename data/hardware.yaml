@@ -1,0 +1,65 @@
+- type: Laptop
+  url: https://slimbook.com/
+  name: Slimbook
+  tags:
+    - "Linux Oriented Hardware"
+- type: Tablet
+  url: https://starlabs.systems/pages/starlite
+  name: Star Labs - StarLite
+  description: Open-source firmware powered by coreboot and edk II.
+  tags:
+    - "Linux Oriented Hardware"
+- type: Laptop
+  url: https://starlabs.systems/pages/starbook
+  name: Star Labs - StarBook
+  tags:
+    - "Linux Oriented Hardware"
+- type: Smartphone
+  url: https://pine64.org/devices/pinephone/
+  name: PINE64 - PinePhone
+  description: a smartphone that empowers users with control over the device. It is capable of running mainline Linux, features hardware privacy switches, and is designed for open-source enthusiasts.
+  tags:
+    - "Linux Oriented Hardware"
+- type: Smartphone
+  url: https://pine64.org/devices/pinephone_pro/
+  name: PINE64 - PinePhone Pro
+  description: PINE64's flagship smartphone and the best way to experience mainline Linux on a mobile device.
+  tags:
+    - "Linux Oriented Hardware"
+- type: Tablet
+  url: https://pine64.org/devices/pinenote/
+  name: PINE64 - PineNote
+  description: Linux Eink tablet
+  tags:
+    - "Linux Oriented Hardware"
+    - "E-Ink open source"
+- type: Tablet
+  url: https://pine64.org/devices/pinetab2/
+  name: PINE64 - PineTab2
+  description: Linux tablet computer.
+  tags:
+    - "Linux Oriented Hardware"
+- type: Tablet
+  url: https://pine64.org/devices/pinetab-v/
+  name: PINE64 - PineTab-V
+  description: RISC-V tablet
+  tags:
+    - "Linux Oriented Hardware"
+- type: Smartphone
+  url: https://volla.online/en/volla-phone-x23/
+  name: Volla Phone X23
+  description: Reliable performance, rugged design and completely Google-free. Volla OS based on Android, or Ubuntu Touch.
+  tags:
+    - "Linux Oriented Hardware"
+- type: Smartphone
+  url: https://commerce.jolla.com/products/jolla-community-phone
+  name: Jolla C2 Community Phone
+  description: True Linux smartphone that works! 4G and VoLTE support.
+  tags:
+    - "Linux Oriented Hardware"
+- type: Smartphone
+  url: https://mudita.com/products/phones/mudita-kompakt/
+  name: Mudita Kompakt
+  description: More offline. More life. A minimalist E-Ink phone for less screen time, and fewer distractions. Essential features with clear UI and a privacy focus.
+  tags:
+    - "E-Ink open source"
