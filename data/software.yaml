@@ -96,14 +96,28 @@
   description: OCI Runtime that enables Podman, Docker, and Kubernetes to run QEMU-compatible Virtual Machine (VM) images. Run VMs as easily as you run containers. Manage containers and VMs together using the same standard tooling.
   use-cases:
     - "VM Management"
+- url: https://github.com/kebairia/kvmcli
+  name: kvmcli
+  description: tool for managing KVM (Kernel-based Virtual Machine) virtual machines. Inspired by Kubernetes’ kubectl, kvmcli provides a declarative way to create, delete, and manage VMs using YAML configuration files.
+  use-cases:
+    - "VM Management"
 - url: https://osbuild.org/
   name: OSBuild
   description: Image Builder - Building operating system artifacts.
   use-cases:
     - "OS Images"
+- url: https://cloud.pritunl.com/
 - url: https://github.com/systemd/mkosi
 - url: https://katacontainers.io/
 - url: https://canonical.com/multipass
+- url: https://bootc-dev.github.io/bootc/
+  name: bootc
+  description: Transactional, in-place operating system updates using OCI/Docker container images. The project applies the "Docker container model using layers" for bootable host systems - using standard OCI/Docker containers as a transport and delivery format for base operating system updates.
+  use-cases:
+    - "OS Images"
+  posts:
+    - url: https://docs.fedoraproject.org/en-US/bootc/building-containers/
+    - url: https://docs.fedoraproject.org/en-US/bootc/bare-metal/
 - url: https://github.com/linka-cloud/d2vm
   name: d2vm
   description: Build Virtual Machine Image from Dockerfile or Docker image
@@ -120,9 +134,18 @@
   description: installation method used by Fedora, Red Hat Enterprise Linux and related distributions to automatically perform unattended OS installation and configuration.
   use-cases:
     - "Unattended OS installation"
+- url: https://anaconda-installer.readthedocs.io/en/latest/intro.html
+  posts:
+    - url: https://docs.fedoraproject.org/en-US/quick-docs/anaconda-introduction/
 - url: https://cloudinit.readthedocs.io/
   name: cloud-init
   description: industry standard multi-distribution method for cross-platform cloud instance initialization. It is supported across all major public cloud providers, provisioning systems for private cloud infrastructure, and bare-metal installations.
+  use-cases:
+    - "Unattended OS installation"
+- url: https://canonical-subiquity.readthedocs-hosted.com/en/latest/
+  github: https://github.com/canonical/subiquity
+  name: subiquity
+  description: Subiquity is an installer framework for Ubuntu. It provides the Ubuntu Server with a text-based installation user interface and Ubuntu Core first-boot configuration. Subiquity is also the back end for the Ubuntu Desktop installer.
   use-cases:
     - "Unattended OS installation"
 - url: https://netlab.tools/
@@ -135,3 +158,9 @@
   description: CLI for orchestrating and managing container-based networking labs. It starts the containers, builds a virtual wiring between them to create lab topologies of users choice and manages labs lifecycle.
   use-cases:
     - "Virtual Networks"
+- url: https://github.com/matthewbauer/nixiosk
+- url: https://curtin.readthedocs.io/en/latest/topics/overview.html
+  name: Curtin
+- url: https://coreos.github.io/ignition/
+  posts:
+    - url: https://docs.fedoraproject.org/en-US/fedora-coreos/producing-ign/

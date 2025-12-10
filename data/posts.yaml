@@ -7,6 +7,12 @@
 - url: https://cpaelzer.github.io/blogs/009-microvm-in-ubuntu/
 - url: https://www.khuedoan.com/posts/alternatives-to-hashicorp-products
 - url: https://www.reddit.com/r/devops/comments/1ckopgu/is_there_an_opensource_fork_for_hashicorp_packer/
+- url: https://kubevirt.io/2020/KubeVirt-VM-Image-Usage-Patterns.html
 - url: https://kubevirt.io/2025/Building-VM-golden-image-with-Packer.html
 - url: https://containers.github.io/bootable/
 - url: https://discuss.linuxcontainers.org/t/incus-as-a-vagrant-replacement/19586
+- url: https://developers.redhat.com/articles/2024/12/18/rootless-virtual-machines-kvm-and-qemu
+- url: https://canonical-subiquity.readthedocs-hosted.com/en/latest/intro-to-autoinstall.html
+- url: https://developers.redhat.com/articles/2025/06/03/automate-vm-golden-image-management-openshift#build_and_upload_new_custom_golden_image_using_openshift_pipelines
+- url: https://www.reddit.com/r/linuxquestions/comments/1mrtpt2/what_is_the_closest_thing_like_terraform/
+- url: https://nil.uniza.sk/en/network-simulation-virtualization-software-list/
