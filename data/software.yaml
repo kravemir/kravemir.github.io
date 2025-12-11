@@ -164,3 +164,33 @@
 - url: https://coreos.github.io/ignition/
   posts:
     - url: https://docs.fedoraproject.org/en-US/fedora-coreos/producing-ign/
+- url: https://docs.alnoda.org/
+  name: Alnoda Workspaces
+  description: open-source portable containerized workspaces.
+  use-cases:
+    - "Containerized Development Environment"
+- url: https://coder.com/
+  name: Coder
+  description: secure environments for developers and their agents.
+  use-cases:
+    - "Containerized Development Environment"
+- url: https://devpod.sh/
+  name: DevPod
+  description: a tool used to create reproducible developer environments
+  use-cases:
+    - "Containerized Development Environment"
+- url: https://eclipse.dev/che/
+  name: Eclipse Che
+  description: run your favorite IDE on Kubernetes. Create a workspace from a Git repository or sample.
+  use-cases:
+    - "Containerized Development Environment"
+- url: https://kasm.com/
+  name: Kasm Workspaces
+  description: stream your workspace directly to your web browser on any device and from any location.
+  use-cases:
+    - "Containerized Development Environment"
+- url: https://lap.dev/
+  name: Lapdev
+  description: seamless dev environments for your Kubernetes apps.
+  use-cases:
+    - "Containerized Development Environment"
