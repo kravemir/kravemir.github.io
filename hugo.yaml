@@ -31,6 +31,14 @@ menu:
       url: /product-reviews/
       weight: 30
 
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+        title: true
+    renderer:
+      unsafe: true
 
 params:
   defaultTheme: auto
@@ -44,9 +52,6 @@ params:
     fediverse_creator: '@kravemir@fosstodon.org'
 
   profileMode:
-    enabled: true
-    title: "Miroslav Kravec"
-    subtitle: Welcome to my site.
     buttons:
       - name: How To (guides)
         url: "/how-to"
