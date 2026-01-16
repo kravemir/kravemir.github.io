@@ -6,15 +6,9 @@ Software Developer born and living in Slovakia.
 
 I develop [ArchiveKeep](https://archivekeep.org) in my free time. It's an open-source personal files archivation tool, that's scratching my own itch, and I believe it would be useful for others as well.
 
-Please consider buying me a pizza, if you like what I do and you want to support it.
+Please consider [buying me a pizza](https://buymeacoffee.com/kravemir), if you like, and want to, support my open work.
 
 {{< social-icons "wiring" >}}
-
-<br />
-
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="kravemir" data-color="#FFDD00" data-emoji="🍕" data-font="Bree" data-text="Buy me a pizza" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
-
-_(I don't consume caffeine, for health reasons, anymore)_
 
 <div class="ideals">
 
