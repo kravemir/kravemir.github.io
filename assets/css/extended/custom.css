@@ -1,3 +1,28 @@
+:root {
+    --footer-bg: #cfe6d2;
+    --link-list-title: #345c3c;
+    --link-list-title-hover: #249c2f;
+    --link-list-subtitle: #6f9e78;
+    --link-list-subtitle-hover: #a8e1b5;
+    --link-list-description: rgba(0,0,0,0.9);
+    --post-header-bg: #F8FBF2;
+    --post-header-border: #E0F0D0;
+    --post-header-meta: rgba(0,0,0,0.44);
+    --content: #202821;
+}
+
+.dark {
+    --footer-bg: #323833;
+    --link-list-title: #7cd88f;
+    --link-list-title-hover: #7aff85;
+    --link-list-subtitle: #93cd9e;
+    --link-list-subtitle-hover: #9fffb4;
+    --link-list-description: rgba(255,255,255,0.9);
+    --post-header-bg: #3c4232;
+    --post-header-border: #5d6555;
+    --post-header-meta: rgba(255,255,255,0.54);
+    --content: rgba(255,255,255,0.95);
+}
 
 /* ------------------- */
 
@@ -85,7 +110,7 @@ h1 a,
 h2 a,
 h3 a,
 h4 a {
-    color: #202821;
+    color: var(--content);
     font-family: 'Lora', serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -170,7 +195,7 @@ nav.main-nav ul li.home a {
     padding: 1.25rem 0 1.5rem;
     margin: 1rem 0 0;
 
-    background: #cfe6d2;
+    background: var(--footer-bg);
 }
 
 .about-me {
@@ -326,7 +351,7 @@ ul.generic-link-list {
 .generic-link-list a:visited {
     font-weight: bold;
     text-decoration: none;
-    color: #345c3c;
+    color: var(--link-list-title);
     display: block;
 }
 
@@ -334,7 +359,7 @@ ul.generic-link-list {
 .generic-link-list a:focus,
 .generic-link-list a:visited:focus,
 .generic-link-list a:visited:hover {
-    color: #249c2f;
+    color: var(--link-list-title-hover);
 }
 
 .generic-link-list a .subtitle,
@@ -342,13 +367,13 @@ ul.generic-link-list {
     display: block;
     font-size: 0.9em;
     font-weight: bold;
-    color: #6f9e78;
+    color: var(--link-list-subtitle);
     margin-top: 0.25rem;
 }
 
 .generic-link-list a:hover .subtitle,
 .generic-link-list a:focus .subtitle{
-    color: #a8e1b5;
+    color: var(--link-list-subtitle-hover);
 }
 
 .generic-link-list  {
@@ -360,6 +385,7 @@ ul.generic-link-list {
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid rgba(0,0,0,15%);
+    color: var(--link-list-description);
 }
 
 .generic-link-list li:after {
@@ -417,15 +443,14 @@ ul.generic-link-list {
     margin-top: 0.425rem;
 
     font-size: 0.7rem;
-    color: rgba(0,0,0,0.9);
 }
 
 .main article header.post-header {
-    background: #F8FBF2;
+    background: var(--post-header-bg);
     padding: 2rem 0;
 
-    border-top: 1px solid #E0F0D0;
-    border-bottom: 1px solid #E0F0D0;
+    border-top: 1px solid var(--post-header-border);
+    border-bottom: 1px solid var(--post-header-border);
 
     max-width: unset;
     margin-top: 1rem;
@@ -461,5 +486,5 @@ article header.post-header .meta {
     margin-bottom: -0.5rem;
     font-size: 0.8rem;
     font-weight: bold;
-    color: rgba(0,0,0,0.44);
+    color: var(--post-header-meta);
 }
