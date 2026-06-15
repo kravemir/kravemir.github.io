@@ -18,8 +18,12 @@ menu:
       name: Search
       url: /search/
       weight: 10
+    - identifier: photography
+      name: Photography
+      url: /photos/
+      weight: 12
     - identifier: knowledgebase
-      name: Knowledgebase
+      name: KB
       url: /kb/
       weight: 15
     - identifier: how-to
