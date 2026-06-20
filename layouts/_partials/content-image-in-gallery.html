@@ -16,13 +16,13 @@
                 <picture style="display: inherit">
                     <source type="image/webp"
                             sizes="{{ $sizes }}"
-                            srcset="{{ with $img.Resize "150x webp CatmullRom" }}{{.RelPermalink}} {{.Width}}w{{end}},
-                    {{ with $img.Resize "200x webp CatmullRom" }}{{.RelPermalink}} {{.Width}}w{{end}},
-                    {{ with $img.Resize "300x webp CatmullRom" }}{{.RelPermalink}} {{.Width}}w{{end}},
-                    {{ with $img.Resize "400x webp CatmullRom" }}{{.RelPermalink}} {{.Width}}w{{end}}"
+                            srcset="{{ with $img.Filter (slice images.AutoOrient (images.Process "resize 150x webp mitchellNetravali q65")) }}{{.RelPermalink}} {{.Width}}w{{end}},
+                    {{ with $img.Filter (slice images.AutoOrient (images.Process "resize 200x webp mitchellNetravali q65")) }}{{.RelPermalink}} {{.Width}}w{{end}},
+                    {{ with $img.Filter (slice images.AutoOrient (images.Process "resize 300x webp mitchellNetravali q65")) }}{{.RelPermalink}} {{.Width}}w{{end}},
+                    {{ with $img.Filter (slice images.AutoOrient (images.Process "resize 400x webp mitchellNetravali q65")) }}{{.RelPermalink}} {{.Width}}w{{end}}"
                     />
                     <img style="height: auto; width: auto"
-                         srcset="{{ with $img.Resize "200x CatmullRom" }}{{.RelPermalink}} {{.Width}}w{{end}},
+                         srcset="{{ with $img.Filter (slice images.AutoOrient (images.Process "resize 200x mitchellNetravali q65")) }}{{.RelPermalink}} {{.Width}}w{{end}},
                     {{ with $img}}{{ .RelPermalink }} {{.Width}}w{{end}}"
                     sizes="{{ $sizes }}"
                     alt="{{ $alt }}"

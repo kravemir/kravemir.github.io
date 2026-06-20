@@ -12,6 +12,12 @@ outputs:
 
 enableRobotsTXT: true
 
+imaging:
+  exif:
+    disableDate: false
+    disableLatLong: true
+    includeFields: "ImageDescription|Orientation"
+
 menu:
   main:
     - identifier: search
