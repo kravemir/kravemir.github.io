@@ -35,10 +35,14 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y yq libimage-exiftool-perl
-      - name: Checkout
+      - name: Checkout (full history)
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          fetch-depth: 0
+      - name: Checkout submodules
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --recursive --depth=1
       - name: Cache Hugo resources
         uses: actions/cache@v4
         with:

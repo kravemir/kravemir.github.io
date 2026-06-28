@@ -4,6 +4,8 @@ title: kravemir.org
 
 theme: ["PaperMod"]
 
+enableGitInfo: true
+
 outputs:
   home:
     - HTML
