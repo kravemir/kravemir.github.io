@@ -3,7 +3,7 @@
 {{ $imgObject := cond (eq "string" (printf "%T" $imgArg)) (index .context.Page.Params.images $imgArg) $imgArg }}
 
 {{ $alt := $imgObject.alt }}
-{{ $img := .context.Page.Resources.GetMatch (printf "*%s*" $imgObject.image) }}
+{{ $img := .context.Page.Resources.GetMatch (printf "*%s" $imgObject.image) }}
 
 {{ if $img }}
     {{ $imgJpg := $img.Resize (printf "%dx%d jpeg" $img.Width $img.Height) }}

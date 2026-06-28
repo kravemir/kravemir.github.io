@@ -27,7 +27,7 @@ images:
     image: 20240804_112758_DSCF0092.JPG
 ---
 
-{{< content-image "scenery-road-on-side" >}}
-{{< content-image "scenery-hay-bale-rolls" >}}
-{{< content-image "road-curved-behind-hay-bale-roll" >}}
-{{< content-image "scenery-with-little-flowers" >}}
+{{< photograph "scenery-road-on-side" >}}
+{{< photograph "scenery-hay-bale-rolls" >}}
+{{< photograph "road-curved-behind-hay-bale-roll" >}}
+{{< photograph "scenery-with-little-flowers" >}}

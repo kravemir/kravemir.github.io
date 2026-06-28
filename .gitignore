@@ -14,3 +14,8 @@ mermaid-out-*.svg
 
 # direnv
 .direnv
+
+# EXIF sidecar metadata
+*.[jJ][pP][gG].json
+*.[jJ][pP][eE][gG].json
+*.[rR][aA][fF].json

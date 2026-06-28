@@ -6,6 +6,9 @@
 
 {{ $imgJpg := $img.Resize (printf "%dx%d jpeg" $img.Width $img.Height) }}
 
+{{- $metaPath := printf "%s.json" $img.Name -}}
+{{- $meta := .Page.Resources.GetMatch $metaPath | transform.Unmarshal -}}
+
 {{ $sizes := "(max-width: 600px) 360px, 600px"}}
 
 <a href="{{ $img.RelPermalink }}" target="_blank">
@@ -29,7 +32,10 @@
                 width="{{ $img.Width }}"
                 height="{{ $img.Height }}"/>
             </picture>
-            <div class="caption">{{ default $imgObject.alt $imgObject.caption }}</div>
+            <div class="caption">
+              <p>{{ default $imgObject.alt $imgObject.caption }}</p>
+              <p><i>{{- partial "photograph-info.html" $meta -}}</i></p>
+            </div>
         </div>
     </figure>
 </a>

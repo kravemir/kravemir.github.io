@@ -15,4 +15,4 @@ images:
     image: 20220514_130933_P1220831.JPG
 ---
 
-{{< content-image "lilac" >}}
+{{< photograph "lilac" >}}

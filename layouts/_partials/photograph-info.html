@@ -1,0 +1,40 @@
+{{- $m := . -}}
+
+{{- $filmMap := dict
+    "0" "Provia"
+    "1" "Velvia"
+    "2" "Astia"
+    "288" "Astia"
+    "3" "Classic Chrome"
+    "4" "Pro Neg. Hi"
+    "5" "Pro Neg. Std"
+    "6" "Classic Neg."
+    "7" "Eterna"
+    "8" "Acros"
+    "9" "Monochrome"
+    "10" "Sepia"
+    "2816" "Reala Ace"
+-}}
+
+{{- $make := lower ($m.Make | default "") -}}
+
+{{- if strings.Contains $make "fujifilm" -}}
+
+{{- $m.Make }} {{ $m.Model }} -
+<b>{{ $m.FilmSimulationName }}</b> film simulation,
+Color Chrome {{ $m.ColorChromeEffect }},
+Color Chrome FX Blue {{ $m.ColorChromeFXBlue }},
+WB {{ $m.WhiteBalance }}{{ with $m.WhiteBalanceFineTune }}{{ if ne . "0 0"}} shift {{ . }}{{end}}{{ end }}, Color {{ $m.Color }},
+{{ $m.DynamicRange }},
+Highlights {{ $m.HighlightTone }},
+Shadows {{ $m.ShadowTone }} -
+ISO {{ $m.ISO }}, {{ $m.ExposureTime }}, F{{ $m.FNumber }}, exposure bias {{ $m.ExposureCompensation }}
+
+{{- else -}}
+
+{{- printf "ISO %v, %v, F%v, exposure bias %v"
+    ($m.ISO | default "")
+    ($m.ExposureTime | default "")
+    ($m.FNumber | default "")
+    ($m.ExposureCompensation | default "") -}}
+{{- end -}}

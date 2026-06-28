@@ -31,6 +31,10 @@ jobs:
       - uses: actions/setup-node@v6
       - name: Install mermaid-cli v11.4.2
         run: npm install -g @mermaid-js/mermaid-cli@11.4.2
+      - name: Install yq and exiftool
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y yq libimage-exiftool-perl
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -49,6 +53,9 @@ jobs:
           echo '{ "args": ["--no-sandbox"] }' > puppeteer-config.json
           export MMDC_EXTRA_OPTIONS="-p puppeteer-config.json"
           ./bin/build-mermaid.sh
+      - name: Generate JSON sidecars for photos
+        run: |
+          ./bin/generate-img-sidecars.sh
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

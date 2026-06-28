@@ -15,4 +15,4 @@ images:
     image: 20240719_124142_DSCF7223.JPG
 ---
 
-{{< content-image "sunflower" >}}
+{{< photograph "sunflower" >}}

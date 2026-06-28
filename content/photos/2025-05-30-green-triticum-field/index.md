@@ -36,9 +36,9 @@ images:
     image: 20250530_145555_DSCF9462.JPG
 ---
 
-{{< content-image "close-up-brighter" >}}
-{{< content-image "landscape" >}}
-{{< content-image "dirt-road-between-fields" >}}
-{{< content-image "landscape-with-high-tatras" >}}
-{{< content-image "close-up" >}}
-<!-- doesn't rotate properly - {{< content-image "dirt-road-to-side" >}} -->
+{{< photograph "close-up-brighter" >}}
+{{< photograph "landscape" >}}
+{{< photograph "dirt-road-between-fields" >}}
+{{< photograph "landscape-with-high-tatras" >}}
+{{< photograph "close-up" >}}
+<!-- doesn't rotate properly - {{< photograph "dirt-road-to-side" >}} -->
