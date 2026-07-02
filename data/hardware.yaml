@@ -63,3 +63,26 @@
   description: More offline. More life. A minimalist E-Ink phone for less screen time, and fewer distractions. Essential features with clear UI and a privacy focus.
   tags:
     - "E-Ink open source"
+- type: Smartphone
+  url: https://aiphor.com/products/bluefox-nx1-4-0-android-smartphone
+  name: BLUEFOX NX1
+  tags:
+    - "Small phone"
+- type: Smartphone
+  url: https://www.fossibot.com/pages/fossibot-f116-pro-kickstarter
+  name: FOSSiBOT F116 Pro
+  description: 4.0" 5G Mini Rugged Phone with Action Camera.
+  tags:
+    - "Small phone"
+- type: Smartphone
+  url: https://shop.lagenio.com/products/eagle-pro-5g-mini-rugged-phone-with-action-camera
+  name: LAGENIO Eagle Pro
+  description: 4.0" 5G Mini Rugged Phone with Action Camera.
+  tags:
+    - "Small phone"
+- type: Smartphone
+  url: https://www.unihertz.com/products/jelly-max
+  name: Unihertz Jelly Max
+  description: 5.0" 5G small smartphone that ideally fits in your palm.
+  tags:
+    - "Small phone"
