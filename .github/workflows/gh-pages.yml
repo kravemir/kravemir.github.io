@@ -36,7 +36,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y yq libimage-exiftool-perl
       - name: Checkout (full history)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Checkout submodules
@@ -44,7 +44,7 @@ jobs:
           git submodule sync --recursive
           git submodule update --init --recursive --depth=1
       - name: Cache Hugo resources
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: resources/_gen
           key: ${{ runner.os }}-hugo-${{ github.ref_name }}-${{ github.sha }}
@@ -62,7 +62,7 @@ jobs:
           ./bin/generate-img-sidecars.sh
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
@@ -72,7 +72,7 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./public
 
@@ -86,4 +86,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
