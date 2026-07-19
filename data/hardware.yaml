@@ -86,3 +86,27 @@
   description: 5.0" 5G small smartphone that ideally fits in your palm.
   tags:
     - "Small phone"
+- type: IC - H-Bridge
+  name: BTS7960
+  description: |
+    High Current PN Half Bridge, 5.5V to 27V, 43 A, low quiescent current of typ. 7 µA. Used in Double BTS7960 43A H-bridge High-power Motor Driver module.
+- type: IC - Step down converter
+  name: TPS54560
+  description: |
+    4.5 V to 60 V Input, 5 A, Step Down DC-DC Converter with Eco-mode, 146 μA Operating Quiescent Current and 2 μA Shutdown Current
+- type: IC - Buck-boost converter
+  name: TPS63070
+  description: |
+    2-V to 16-V Buck-Boost Converter With 3.6-A Switch Current, Typical Device Quiescent Current: 50 μA.
+- type: IC - Boost converter
+  name: TPS61088
+  description: |
+    10-A Fully-Integrated Synchronous Boost Converter, 2.7-V to 12-V in, 4.5-V to 12.6-V out, 110 µA quiescent current.
+- type: Motor
+  name: MY1016Z
+  description: |
+    Permanent magnet brushed DC gear-reduction motor. Features 24V 250W and 24V/36V 350W variants.
+- type: Motor
+  name: MY1020Z
+  description: |
+    Permanent magnet brushed DC gear-reduction motor. Features 24V 450W, 36V 450W, 48V 600W and other variants.
