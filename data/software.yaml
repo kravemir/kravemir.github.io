@@ -47,12 +47,50 @@
     - "Desktop"
   description: Reliable, atomic, safe (rollback), containerized (Flatpak), developer friendly, private, trusted, open-source.
 - type: operating-system
+  url: https://projectbluefin.io/
+  name: Universal Blue Bluefin
+  use-cases:
+    - "Desktop"
+    - "Distribution focused on containerized dev env"
+  description: Developer-focused Fedora Atomic Desktop image from Universal Blue. It puts Podman, Distrobox, dev containers, and other cloud-native workflow tools close to the OS foundation, includes Homebrew, and supports Secure Boot through the Fedora/Universal Blue boot chain.
+- type: operating-system
+  url: https://getaurora.dev/
+  name: Universal Blue Aurora
+  use-cases:
+    - "Desktop"
+    - "Distribution focused on containerized dev env"
+  description: KDE-focused Fedora Atomic Desktop image from Universal Blue, designed as a batteries-included developer workstation. It builds on the same container-native base as Bluefin, with Podman, Distrobox, dev-container oriented workflows, Homebrew, and Secure Boot support through the Fedora/Universal Blue boot chain.
+- type: operating-system
+  url: https://aeondesktop.org/
+  name: openSUSE Aeon
+  use-cases:
+    - "Desktop"
+    - "Distribution focused on containerized dev env"
+  description: Immutable openSUSE desktop designed around transactional updates, Flatpak applications, and containerized development workflows. Distrobox is part of the intended workflow for development tools and CLI apps, with Secure Boot support inherited from openSUSE.
+- type: operating-system
+  url: https://heliumos.org/
+  name: HeliumOS
+  use-cases:
+    - "Desktop"
+    - "Distribution focused on containerized dev env"
+  description: |
+    Immutable Linux distribution focused on containerized desktop and development workflows. It is relevant for Podman, Distrobox, or similar container-first usage patterns. Warning: Secure Boot support is missing or not clearly confirmed; verify current project documentation before relying on it.
+- type: operating-system
+  url: https://blendos.co/
+  name: blendOS
+  use-cases:
+    - "Desktop"
+    - "Distribution focused on containerized dev env"
+  description: |
+    Immutable Linux distribution that emphasizes using containers and multiple distribution environments for applications and development workflows. It is relevant for Distrobox-like workflows and containerized development. Warning: Secure Boot support is missing or not clearly confirmed; verify current project documentation before relying on it.
+- type: operating-system
   url: https://secureblue.dev/
-  name: SecureBlue
+  name: secureblue
   use-cases:
     - "Desktop"
     - "Server"
-  description: Security-focused desktop and server Linux operating system. Shipped as a set of OCI bootable container images generated with BlueBuild, using Fedora Atomic Desktop’s base images as a starting point.
+    - "Distribution focused on containerized dev env"
+  description: Security-focused desktop and server Linux operating system shipped as OCI bootable container images generated with BlueBuild, using Fedora Atomic Desktop base images. It keeps Fedora Atomic’s container-native workflow with Podman and Distrobox while adding hardening-focused defaults, and supports Secure Boot through the Fedora boot chain.
 - type: operating-system
   url: https://sandstorm.io/
   name: Sandstorm

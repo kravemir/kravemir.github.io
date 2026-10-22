@@ -8,6 +8,12 @@ title: Operating Systems
 
 {{< thing-list collection=software type=operating-system useCase="Desktop" >}}
 
+## Distributions focused on containerized development environments
+
+These desktop operating systems are notable for development workflows built around Podman, Distrobox, dev containers, or similar container-first tooling. Secure Boot support is especially relevant here because these systems often aim to combine an immutable or image-based base OS with a trusted boot chain. Check each distribution’s notes, as Secure Boot support can vary or be unconfirmed.
+
+{{< thing-list collection=software type=operating-system useCase="Distribution focused on containerized dev env" >}}
+
 ## Security by Compartmentalization
 
 Operating systems:
