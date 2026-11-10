@@ -1,6 +1,38 @@
 {{- define "main" }}
 
+<style>
+.home-profile-photo {
+  float: right;
+  margin: 0 0 15px 25px;
+  border-radius: 50%;
+  max-width: 160px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+@media (max-width: 600px) {
+  .home-profile-photo {
+    float: none;
+    display: block;
+    margin: 0 auto 15px;
+    max-width: 120px;
+  }
+}
+</style>
+
 <header class="page-header">
+  {{- $img := resources.GetMatch (printf "**%s" (strings.TrimPrefix "/" site.Params.profileMode.imageUrl)) }}
+  {{- $small  := $img.Resize "x120" }}
+  {{- $medium := $img.Resize "x160" }}
+  {{- $large  := $img.Resize "x240" }}
+  {{- $veryLarge  := $img.Resize "x320" }}
+  <img class="home-profile-photo"
+    src="{{ $large.Permalink }}"
+    srcset="{{ $small.Permalink }} 120w, {{ $medium.Permalink }} 160w, {{ $large.Permalink }} 240w, {{ $veryLarge.Permalink }} 320w"
+    sizes="(max-width: 600px) 120px, 160px"
+    alt="{{ site.Params.profileMode.imageTitle | default "profile image" }}"
+    title="{{ site.Params.profileMode.imageTitle }}"
+  />
   <h1>{{ .Title }}</h1>
 </header>
 

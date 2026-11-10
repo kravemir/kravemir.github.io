@@ -62,6 +62,8 @@ params:
     fediverse_creator: '@kravemir@fosstodon.org'
 
   profileMode:
+    imageUrl: "/images/profile.jpg"
+    imageTitle: "My photograph"
     buttons:
       - name: How To (guides)
         url: "/how-to"
