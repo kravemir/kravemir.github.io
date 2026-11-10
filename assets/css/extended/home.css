@@ -6,3 +6,101 @@
 .home-content .social-icons a {
     box-shadow: none;
 }
+
+/* Photo grid on home page */
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+    .photo-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 0.75rem;
+    }
+}
+
+.photo-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.photo-card > a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+}
+
+.photo-card > a:hover {
+    color: inherit;
+}
+
+.photo-card .cover-image {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    float: none;
+    margin: 0;
+    height: auto;
+    position: relative;
+}
+
+.photo-card .cover-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: rgb(228, 228, 228);
+}
+
+.photo-card-info {
+    margin-top: 0.2rem;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.photo-card-title {
+    display: block;
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: var(--link-list-title);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.photo-card > a:hover .photo-card-title {
+    color: var(--link-list-title-hover);
+}
+
+.photo-card-count {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--link-list-description);
+    margin-top: 0.1rem;
+    line-height: 1.2;
+}
+
+.photo-card-description {
+    display: block;
+    font-size: 0.6rem;
+    color: var(--link-list-description);
+    margin-top: 0.1rem;
+    line-height: 1.2;
+}
+
+.photo-card-description p {
+    margin: 0;
+}

@@ -8,11 +8,16 @@
 <div class="post-content home-content">{{ .Content }}</div>
 {{- end }}
 
-{{ $pages := .Site.RegularPages.ByDate.Reverse }}
-{{ $pages = where $pages "Params.Date" "ne" nil }}
+{{ $allPages := .Site.RegularPages.ByDate.Reverse }}
+{{ $allPages = where $allPages "Params.Date" "ne" nil }}
 
+{{ $posts := where $allPages "Section" "ne" "photos" }}
+{{ $photos := where $allPages "Section" "eq" "photos" }}
+
+{{- if $posts }}
+<h2>Posts</h2>
 <ul class="generic-link-list product-review-list">
-  {{- range $pages   }}
+  {{- range $posts }}
   <li>
     {{ partial "list-item-cover-image-thumbnail.html" . }}
     <a href="{{ .Permalink }}">
@@ -27,5 +32,24 @@
   </li>
   {{- end }}
 </ul>
+{{- end }}
+
+{{- if $photos }}
+<h2>Photographs</h2>
+<div class="photo-grid">
+  {{- range $photos }}
+  {{- $photoCount := len (findRE `class="page-image"` .Content) }}
+  <div class="photo-card">
+    <a href="{{ .Permalink }}">
+      {{ partial "list-item-cover-image-thumbnail-photo.html" . }}
+      <div class="photo-card-info">
+        <span class="photo-card-title">{{ .Title }}</span>
+        <span class="photo-card-count">{{ $photoCount }} photograph{{ if ne $photoCount 1 }}s{{ end }}</span>
+      </div>
+    </a>
+  </div>
+  {{- end }}
+</div>
+{{- end }}
 
 {{- end }}
