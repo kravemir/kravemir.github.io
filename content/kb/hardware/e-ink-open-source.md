@@ -11,3 +11,7 @@ title: Open-source E-Ink
 ## Tablets
 
 {{< thing-list collection=hardware type=Tablet tag="E-Ink open source" >}}
+
+## Development Boards
+
+{{< thing-list collection=hardware type="Development Board" tag="E-Ink open source" >}}

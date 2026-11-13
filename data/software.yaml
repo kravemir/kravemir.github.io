@@ -40,6 +40,8 @@
   url: https://linuxcontainers.org/incus/
   name: Incus
   description: Incus is a next-generation system container, application container, and virtual machine manager.
+  posts:
+    - url: https://regrow.earth/blog/2024-10-29_gui-apps-in-incus-containers/
 - type: operating-system
   url: https://fedoraproject.org/atomic-desktops/silverblue/
   name: Fedora Silverblue
@@ -119,9 +121,10 @@
   name: Rockstor
   use-cases:
     - "NAS"
-- url: https://lima-vm.io/docs/
+- url: https://lima-vm.io/
+  github: https://github.com/lima-vm/lima
   name: Lima VM
-  description: Lima launches Linux virtual machines with automatic file sharing and port forwarding (similar to WSL2).
+  description: Lima launches Linux virtual machines with automatic file sharing and port forwarding (similar to WSL2), with a focus on running containers.
   use-cases:
     - "VM Management"
 - url: https://developer.hashicorp.com/vagrant
@@ -232,3 +235,65 @@
   description: seamless dev environments for your Kubernetes apps.
   use-cases:
     - "Containerized Development Environment"
+- url: https://getartcraft.com/apps/anicraft
+  github: https://github.com/storytold/AniCraft
+  name: AniCraft
+  description: Open-source 2D vector animation studio written in pure Rust, with timeline, layers, keyframes, classic and shape tweens, and onion skinning. Runs natively on macOS, Windows, Linux, FreeBSD and in the browser via WebAssembly.
+  use-cases:
+    - "2D Animation"
+- url: https://getartcraft.com/apps/deckcraft
+  github: https://github.com/storytold/deckcraft
+  name: DeckCraft
+  description: Build and deliver dynamic slide presentations, in pure Rust.
+  use-cases:
+    - "Presentations"
+- url: https://getartcraft.com/apps/effectcraft
+  github: https://github.com/storytold/effectcraft
+  name: EffectCraft
+  description: Open-source motion graphics and visual effects compositor built in pure Rust, with compositions, layers, keyframes, 259 effects, expressions, 3D cameras and lights, and a render queue.
+  use-cases:
+    - "Motion Graphics"
+- url: https://getartcraft.com/apps/filmcraft
+  github: https://github.com/storytold/filmcraft
+  name: FilmCraft
+  description: Professional open-source non-linear video editor built from scratch in pure Rust, with source and program monitors, a real timeline, and every trim mode.
+  use-cases:
+    - "Video Editing"
+- url: https://github.com/sozi-projects/Sozi
+  name: Sozi
+  description: A free, open-source "zooming" presentation editor for SVG documents. Instead of a sequence of slides, a presentation is organized as a succession of viewpoints on a map that you explore.
+  use-cases:
+    - "Presentations"
+- url: https://affine.pro/
+  github: https://github.com/toeverything/affine
+  name: AFFiNE
+  description: A privacy-focused, local-first, open-source alternative to Notion and Miro. One hyper-fused platform combining rich documents, relational databases, and an infinite whiteboard canvas.
+  use-cases:
+    - "Knowledge Base"
+- url: https://github.com/ptitSeb/box64
+  name: Box64
+  description: Linux userspace x86_64 emulator with dynamic recompilation, targeted at ARM64, RV64 and LoongArch Linux devices. Enables running x86_64 binaries natively on non-x86 hardware.
+  use-cases:
+    - "Emulation"
+- url: https://github.com/fosrl/pangolin
+  name: Pangolin
+  description: Modern networking and security platform providing secure access and connectivity to apps, infrastructure, and AI workloads. Connect and protect your users with self-hosted or cloud deployment.
+  use-cases:
+    - "Networking"
+- url: https://github.com/baidu/Unlimited-OCR
+  name: Unlimited OCR
+  description: Open-source OCR model from Baidu for one-shot long-horizon document parsing. Can parse books, filings and reports of hundreds of pages in a single request with a 3B parameter MoE architecture.
+  use-cases:
+    - "OCR"
+- type: operating-system
+  url: https://www.slax.org/
+  name: Slax
+  description: A small, fast, portable Linux operating system that runs from a USB drive, CD/DVD, or virtual machine without permanent installation. Based on Debian (and also available on Slackware), it uses Fluxbox and supports Secure Boot with a signed UEFI bootloader.
+  use-cases:
+    - "Desktop"
+
+- url: https://off-the.cloud/
+  name: Off The Cloud
+  description: A private social network for family and friends, and a home for photos and files, running on a small device you own. Self-hosted alternative to cloud social networks.
+  use-cases:
+    - "Self-hosted Social Network"

@@ -110,3 +110,9 @@
   name: MY1020Z
   description: |
     Permanent magnet brushed DC gear-reduction motor. Features 24V 450W, 36V 450W, 48V 600W and other variants.
+- type: Development Board
+  url: https://www.zectrix.com/en/note4c.html
+  name: NOTE4C DevKit
+  description: Four-color e-paper development device with a 4.2-inch display (400×300), powered by ESP32-S3. Open-source reference firmware for building low-power information displays, electronic labels, and status boards.
+  tags:
+    - "E-Ink open source"

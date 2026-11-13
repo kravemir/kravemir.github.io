@@ -1,0 +1,42 @@
+- type: service
+  url: https://www.interserver.net/vps/
+  name: InterServer
+  description: VPS hosting provider offering Linux and Windows virtual servers with KVM virtualization, full root access, SSD/NVMe storage, and RAID-10 arrays. Plans start at $3/mo with scalable slice-based resources, free DDoS protection, and managed support on higher-tier plans.
+  use-cases:
+    - "Hosting"
+- type: service
+  url: https://tenma.cloud/
+  name: Tenma Cloud
+  description: VPS hosting provider offering Linux and Windows servers with dedicated vCPU and NVMe storage from €3/mo. Available across six regions with card or crypto payment options.
+  use-cases:
+    - "Hosting"
+- type: service
+  url: https://luxhost.cc/en/servers
+  name: LuxHost
+  description: Anonymous VPS hosting provider with no KYC required, accepting crypto and card payments. Offers servers with AMD Ryzen 9 9950X, NVMe storage, DDR5 RAM, and 10 Gbps network in fast data centers with 24/7 support.
+  use-cases:
+    - "Hosting"
+- type: service
+  url: https://www.forpsi.sk/vps-hosting/
+  name: Forpsi
+  description: Czech and Slovak VPS hosting provider (owned by Aruba) offering virtual servers with SSD storage, Linux and Windows options, recovery console, and ISO 27001 certification. Plans start from approximately €1/mo with scalable resources and 99.9% uptime SLA.
+  use-cases:
+    - "Hosting"
+- type: service
+  url: https://www.webglobe.sk/servery/vps
+  name: Webglobe
+  description: Slovak VPS hosting provider offering managed virtual servers with AMD EPYC CPUs, NVMe SSD storage, 24/7 monitoring, daily backups, and VIP support. Plans start from approximately €7/mo with intuitive web interface.
+  use-cases:
+    - "Hosting"
+- type: service
+  url: https://vedos.hosting/sk/vps-on/
+  name: Vedos VPS ON
+  description: Czech and Slovak VPS hosting provider offering fully configurable virtual servers (Nebule platform) where CPU, RAM, and disk can be set independently. Supports external weekly backups and flexible scaling.
+  use-cases:
+    - "Hosting"
+- type: service
+  url: https://vedos.hosting/sk/vps-ssd/
+  name: Vedos VPS SSD
+  description: Czech and Slovak VPS hosting provider offering fixed-module virtual servers with SSD storage. Suitable when predefined configurations are sufficient, as an alternative to the fully configurable VPS ON option.
+  use-cases:
+    - "Hosting"

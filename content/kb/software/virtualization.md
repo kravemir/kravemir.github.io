@@ -23,3 +23,7 @@ title: Virtualization
 ## Containerized Development Environment
 
 {{< thing-list collection=software useCase="Containerized Development Environment" >}}
+
+## Emulation
+
+{{< thing-list collection=software useCase="Emulation" >}}
