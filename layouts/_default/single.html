@@ -9,6 +9,14 @@
     </h1>
     {{ with .Params.description }}<div class="description">{{ .  | markdownify }}</div> {{ end }}
 
+    {{- if .Params.platforms }}
+    <div class="platform-badges">
+      {{- range .Params.platforms }}
+      <img src="https://img.shields.io/badge/{{ urlquery "Platform" }}-{{ urlquery . }}-4eaa25?style=flat-square" alt="{{ . }}" title="{{ . }}" loading="lazy"/>
+      {{- end }}
+    </div>
+    {{- end }}
+
     {{- partial "custom_meta.html" . -}}
   </header>
 

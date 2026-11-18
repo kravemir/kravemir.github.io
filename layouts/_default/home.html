@@ -44,6 +44,7 @@
 {{ $allPages = where $allPages "Params.Date" "ne" nil }}
 
 {{ $posts := where $allPages "Section" "ne" "photos" }}
+{{ $posts = where $posts "Section" "ne" "projects" }}
 {{ $photos := where $allPages "Section" "eq" "photos" }}
 
 {{- if $posts }}
@@ -64,6 +65,31 @@
   </li>
   {{- end }}
 </ul>
+{{- end }}
+
+{{- $openSourceProjects := where (where $allPages "Section" "eq" "projects") "Params.Tags" "intersect" (slice "open-source") }}
+{{- if $openSourceProjects }}
+<h2>Open Source Projects</h2>
+<div class="project-card-grid">
+  {{- range $openSourceProjects }}
+  <div class="project-card">
+    <a href="{{ .Permalink }}">
+      <div class="project-card-title">{{ .Title }}</div>
+      {{ $intro := .Summary }}
+      {{ if .Params.intro }}{{ $intro = .Params.intro }}{{ end }}
+      {{ if .Params.Description }}{{ $intro = .Params.Description }}{{ end }}
+      {{ with $intro }}<div class="project-card-intro">{{ . | truncate 160 }}</div>{{ end }}
+      {{- if .Params.platforms }}
+      <div class="project-card-badges">
+        {{- range .Params.platforms }}
+        <img src="https://img.shields.io/badge/{{ urlquery "Platform" }}-{{ urlquery . }}-4eaa25?style=flat-square" alt="{{ . }}" title="{{ . }}" loading="lazy"/>
+        {{- end }}
+      </div>
+      {{- end }}
+    </a>
+  </div>
+  {{- end }}
+</div>
 {{- end }}
 
 {{- if $photos }}

@@ -488,3 +488,17 @@ article header.post-header .meta {
     font-weight: bold;
     color: var(--post-header-meta);
 }
+
+.platform-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.75rem;
+}
+
+.platform-badges img {
+    height: 20px;
+    width: auto;
+    border-radius: 0;
+    overflow: visible;
+}
