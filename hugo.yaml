@@ -20,6 +20,10 @@ imaging:
 
 menu:
   main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 5
     - identifier: search
       name: Search
       url: /search/
